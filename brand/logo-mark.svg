@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="mark-title mark-desc">
+  <title id="mark-title">ShadeBreaker Insights</title>
+  <desc id="mark-desc">An atmospheric sunrise. A warm glow of light overtaking a dark field, with a half-sun cresting the horizon.</desc>
+  <defs>
+    <clipPath id="mark-clip">
+      <rect x="12" y="12" width="176" height="176" rx="38"/>
+    </clipPath>
+    <radialGradient id="mark-sky" cx="50%" cy="68%" r="68%" fx="50%" fy="70%">
+      <stop offset="0%"  stop-color="#F4D896" stop-opacity="1"/>
+      <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
+      <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
+      <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#07162B" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="mark-sun" cx="50%" cy="100%" r="75%">
+      <stop offset="0%"  stop-color="#FFF4C8" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#F4D896" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#D4A24C" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark base -->
+  <rect x="12" y="12" width="176" height="176" rx="38" fill="#07162B"/>
+  <!-- Atmospheric glow overlay -->
+  <rect x="12" y="12" width="176" height="176" rx="38" fill="url(#mark-sky)"/>
+
+  <g clip-path="url(#mark-clip)">
+    <!-- Half-sun cresting horizon -->
+    <path d="M56 132 A44 44 0 0 1 144 132 Z" fill="url(#mark-sun)"/>
+    <!-- Crisp horizon line -->
+    <line x1="12" y1="132" x2="188" y2="132" stroke="#D4A24C" stroke-width="3"/>
+    <!-- Dark ground -->
+    <rect x="12" y="132" width="176" height="58" fill="#07162B"/>
+  </g>
+
+  <!-- Subtle outer edge for definition on light backgrounds -->
+  <rect x="12" y="12" width="176" height="176" rx="38" fill="none" stroke="#07162B" stroke-width="1" stroke-opacity="0.15"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-labelledby="s-title">
+  <title id="s-title">ShadeBreaker Insights</title>
+  <defs>
+    <clipPath id="s-clip"><rect x="112" y="12" width="176" height="176" rx="38"/></clipPath>
+    <radialGradient id="s-sky" cx="50%" cy="68%" r="68%" fx="50%" fy="70%">
+      <stop offset="0%"  stop-color="#F4D896" stop-opacity="1"/>
+      <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
+      <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
+      <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#07162B" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="s-sun" cx="50%" cy="100%" r="75%">
+      <stop offset="0%"  stop-color="#FFF4C8"/>
+      <stop offset="55%" stop-color="#F4D896"/>
+      <stop offset="100%" stop-color="#D4A24C"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Mark (centered) -->
+  <g>
+    <rect x="112" y="12" width="176" height="176" rx="38" fill="#07162B"/>
+    <rect x="112" y="12" width="176" height="176" rx="38" fill="url(#s-sky)"/>
+    <g clip-path="url(#s-clip)">
+      <path d="M156 132 A44 44 0 0 1 244 132 Z" fill="url(#s-sun)"/>
+      <line x1="112" y1="132" x2="288" y2="132" stroke="#D4A24C" stroke-width="3"/>
+      <rect x="112" y="132" width="176" height="58" fill="#07162B"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="200" y="260" fill="#0B1F3A" text-anchor="middle"
+        font-family="Fraunces, Georgia, 'Times New Roman', serif"
+        font-size="48" font-weight="600" letter-spacing="-0.8">
+    ShadeBreaker<tspan fill="#D4A24C">.</tspan>
+  </text>
+  <line x1="130" y1="280" x2="270" y2="280" stroke="#0B1F3A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="200" y="308" fill="#0B1F3A" text-anchor="middle"
+        font-family="Inter, system-ui, sans-serif"
+        font-size="15" font-weight="500" letter-spacing="3.3">
+    INSIGHTS
+  </text>
+</svg>
