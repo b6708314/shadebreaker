@@ -1,0 +1,50 @@
+# ============================================================
+# ShadeBreaker Insights — Netlify configuration
+# ============================================================
+# This file tells Netlify how to build, serve, and secure the site.
+# It lives at the root of the deployed folder. No build step is
+# required — the site is static HTML/CSS/JS/SVG.
+
+[build]
+  publish = "."
+
+# ------------------------------------------------------------
+# Security headers (applied to every response)
+# ------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Content Security Policy: allow Google Fonts + self
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
+
+# ------------------------------------------------------------
+# Long cache for immutable brand assets
+# ------------------------------------------------------------
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ------------------------------------------------------------
+# Redirects
+# ------------------------------------------------------------
+# Force HTTPS (Netlify does this by default once SSL provisions,
+# but this makes it explicit). The secondary domain redirect
+# (shadebreakerinsights.com -> shadebreaker.com) is configured
+# in Netlify's Domain Management UI, not here.
+
+[[redirects]]
+  from = "http://shadebreaker.com/*"
+  to = "https://shadebreaker.com/:splat"
+  status = 301
+  force = true

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ShadeBreaker Insights (monochrome, for dark backgrounds)">
+  <title>ShadeBreaker Insights — Monochrome Reversed (for use on dark backgrounds)</title>
+  <defs>
+    <clipPath id="mono-clip-l"><rect x="12" y="12" width="176" height="176" rx="38"/></clipPath>
+  </defs>
+  <rect x="12" y="12" width="176" height="176" rx="38" fill="#F7F3EC"/>
+  <g clip-path="url(#mono-clip-l)">
+    <path d="M56 132 A44 44 0 0 1 144 132 Z" fill="#0B1F3A"/>
+    <line x1="12" y1="132" x2="188" y2="132" stroke="#0B1F3A" stroke-width="3"/>
+    <g stroke="#0B1F3A" stroke-opacity="0.3">
+      <path d="M40 110 A60 60 0 0 1 160 110" fill="none" stroke-width="1.5"/>
+      <path d="M28 92 A72 72 0 0 1 172 92" fill="none" stroke-width="1.2"/>
+    </g>
+    <rect x="12" y="132" width="176" height="58" fill="#F7F3EC"/>
+  </g>
+</svg>

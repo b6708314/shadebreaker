@@ -1,0 +1,23 @@
+# Design iteration / scratch files — kept locally, not deployed
+01-research-findings.md
+02-logo-concepts.html
+03-logo-concepts-v2.html
+04-dayspring-iterations.html
+05-dayspring-round2.html
+06-dayspring-cross.html
+07-brand-kit.html
+DEPLOYMENT.md
+
+# Generated Word versions of essays (for your reference, not for the web)
+insights/docx/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Netlify local state (if netlify-cli is ever used)
+.netlify/
