@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="ShadeBreaker Insights — management consulting for leaders who need clarity. Strategy, operations, and leadership advisory for businesses, nonprofits, para-church ministries, and the churches they serve." />
+<meta name="theme-color" content="#0B1F3A" />
+<link rel="canonical" href="https://shadebreaker.com/" />
+<title>ShadeBreaker Insights — Clarity through contrast</title>
+
+<!-- Open Graph (LinkedIn, Facebook, iMessage, Slack previews) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ShadeBreaker Insights" />
+<meta property="og:title" content="ShadeBreaker Insights — Clarity through contrast" />
+<meta property="og:description" content="Driving strategic innovation. Kicking out the shadows. Bringing clarity to mission. Independent management consulting for leaders in the marketplace and in the ministry." />
+<meta property="og:url" content="https://shadebreaker.com/" />
+<meta property="og:image" content="https://shadebreaker.com/brand/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ShadeBreaker Insights — Clarity through contrast. A half-sun rising over an amber horizon in a deep navy sky." />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ShadeBreaker Insights — Clarity through contrast" />
+<meta name="twitter:description" content="Driving strategic innovation. Kicking out the shadows. Bringing clarity to mission." />
+<meta name="twitter:image" content="https://shadebreaker.com/brand/og-image.jpg" />
+
+<!-- Favicon: Atmospheric mark (SVG) -->
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg" />
+<link rel="apple-touch-icon" href="brand/favicon.svg" />
+
+<!-- Fonts: Fraunces (editorial serif) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ---------- Design tokens ---------- */
+  :root {
+    --navy: #0B1F3A;
+    --navy-700: #132a4d;
+    --navy-400: #3a527a;
+    --amber: #D4A24C;
+    --amber-600: #b8873a;
+    --cream: #F7F3EC;
+    --paper: #FFFFFF;
+    --ink: #1F2937;
+    --ink-soft: #4B5563;
+    --line: #E5E7EB;
+    --line-dark: #243858;
+
+    --container: 1200px;
+    --radius: 14px;
+    --radius-sm: 8px;
+
+    --f-serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --f-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    --shadow-sm: 0 1px 2px rgba(11,31,58,.06), 0 1px 3px rgba(11,31,58,.08);
+    --shadow-md: 0 10px 30px -12px rgba(11,31,58,.18);
+  }
+
+  /* ---------- Reset ---------- */
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--f-sans);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+  h1,h2,h3,h4 { font-family: var(--f-serif); font-weight: 600; color: var(--navy); letter-spacing: -0.01em; margin: 0 0 0.5em; line-height: 1.15; }
+  p { margin: 0 0 1em; }
+  ::selection { background: var(--amber); color: var(--navy); }
+
+  /* ---------- Layout helpers ---------- */
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--f-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber-600);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before { content: "—"; margin-right: 10px; color: var(--amber); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+    white-space: nowrap;
+  }
+  .btn--primary { background: var(--navy); color: #fff; }
+  .btn--primary:hover { background: var(--navy-700); transform: translateY(-1px); }
+  .btn--accent { background: var(--amber); color: var(--navy); }
+  .btn--accent:hover { background: var(--amber-600); color: #fff; transform: translateY(-1px); }
+  .btn--ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+  .btn--ghost:hover { background: var(--navy); color: #fff; }
+  .btn--ghost-light { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.5); }
+  .btn--ghost-light:hover { background: #fff; color: var(--navy); border-color: #fff; }
+  .btn .arrow { transition: transform .2s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- Navigation ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-serif); font-weight: 600; font-size: 20px; color: var(--navy); }
+  .brand__mark {
+    width: 36px; height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+  .brand__mark svg { width: 100%; height: 100%; display: block; }
+  .nav__links { display: flex; align-items: center; gap: 28px; }
+  .nav__links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: color .2s ease;
+    position: relative;
+  }
+  .nav__links a:hover { color: var(--navy); }
+  .nav__links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: var(--amber);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .25s ease;
+  }
+  .nav__links a:hover::after { transform: scaleX(1); }
+  .nav__cta { display: flex; align-items: center; gap: 12px; }
+  .nav__toggle { display: none; padding: 8px; color: var(--navy); }
+  .nav__toggle svg { width: 24px; height: 24px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 90px 0 70px;
+    background:
+      radial-gradient(80% 60% at 85% 10%, rgba(212,162,76,.12), transparent 60%),
+      linear-gradient(180deg, var(--cream) 0%, #fff 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 5.5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--amber-600);
+    font-weight: 400;
+  }
+  .hero__lede {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin-bottom: 18px;
+  }
+  .hero__audience {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--navy);
+    font-style: italic;
+    max-width: 52ch;
+    margin: 0 0 32px;
+    padding-left: 14px;
+    border-left: 3px solid var(--amber);
+  }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero__meta {
+    margin-top: 36px;
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .hero__meta strong { color: var(--navy); font-weight: 600; }
+
+  /* Hero visual — abstract light-breaking-through-shade motif */
+  .hero__art {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-width: 480px;
+    margin-left: auto;
+  }
+  .hero__art svg { width: 100%; height: 100%; }
+
+  /* ---------- Trust bar ---------- */
+  .trust {
+    padding: 36px 0;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .trust__label {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .trust__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+    align-items: center;
+    opacity: 0.82;
+  }
+  .trust__item {
+    text-align: center;
+    font-family: var(--f-serif);
+    font-weight: 600;
+    color: var(--navy-400);
+    font-size: 17px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- Sections ---------- */
+  .section { padding: 100px 0; }
+  .section--cream { background: var(--cream); }
+  .section--navy { background: var(--navy); color: #E6EBF3; }
+  .section--navy h1,
+  .section--navy h2,
+  .section--navy h3 { color: #fff; }
+  .section--navy .eyebrow { color: var(--amber); }
+  .section--navy .eyebrow::before { color: var(--amber); }
+
+  .section__head { max-width: 760px; margin-bottom: 56px; }
+  .section__head h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+  }
+  .section__head p {
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+  .section--navy .section__head p { color: #B9C4D6; }
+
+  /* ---------- Services grid ---------- */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+  }
+  .card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber-600);
+    margin-bottom: 20px;
+  }
+  .card__icon svg { width: 24px; height: 24px; }
+  .card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  /* ---------- Approach / 3-step ---------- */
+  .approach {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .step {
+    padding: 32px 28px;
+    border-left: 2px solid var(--line-dark);
+    position: relative;
+  }
+  .section--navy .step { border-left-color: rgba(212,162,76,.35); }
+  .step__num {
+    font-family: var(--f-serif);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--amber);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .step h3 { color: #fff; font-size: 24px; margin-bottom: 12px; }
+  .step p { color: #B9C4D6; font-size: 16px; margin: 0; }
+
+  /* ---------- Faith practice callout ---------- */
+  .practice {
+    background: #fff;
+    border-radius: calc(var(--radius) + 6px);
+    padding: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    border: 1px solid var(--line);
+  }
+  .practice__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--cream);
+    color: var(--amber-600);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 18px;
+  }
+  .practice__tag::before {
+    content: "";
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--amber);
+  }
+  .practice h2 {
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: 16px;
+  }
+  .practice p {
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+  .practice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: grid;
+    gap: 10px;
+  }
+  .practice li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+  .practice li::before {
+    content: "";
+    flex: none;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 30%, #fff 20%, transparent 22%),
+      var(--amber);
+    margin-top: 4px;
+  }
+
+  /* ---------- Insights ---------- */
+  .insights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .article {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .article:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .article__img {
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, var(--navy), var(--navy-700));
+    position: relative;
+    overflow: hidden;
+  }
+  .article__img svg { display: block; width: 100%; height: 100%; }
+  .article__body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+  .article__tag {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--amber-600);
+    margin-bottom: 10px;
+  }
+  .article h3 { font-size: 20px; margin-bottom: 8px; }
+  .article p { font-size: 15px; color: var(--ink-soft); margin-bottom: 16px; flex: 1; }
+  .article__more {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .article--featured {
+    border-color: var(--amber-600);
+    box-shadow: 0 8px 32px rgba(20, 37, 66, .08);
+  }
+  .article--soon {
+    opacity: .72;
+  }
+  .article--soon:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .article--soon .article__img {
+    background: linear-gradient(135deg, #3a4a66, #2a3a56);
+    filter: saturate(.75);
+  }
+  .article__tag--muted {
+    color: var(--ink-soft);
+  }
+  .article__more--muted {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    font-style: italic;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ---------- About / founder ---------- */
+  .about {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .about__photo {
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius);
+    background:
+      linear-gradient(135deg, rgba(11,31,58,.08), rgba(212,162,76,.18)),
+      var(--cream);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 0 rgba(11,31,58,0.02), 0 18px 40px rgba(11,31,58,0.08);
+  }
+  .about__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 22%;
+    display: block;
+  }
+  .about h2 { font-size: clamp(28px, 3.5vw, 44px); margin-bottom: 18px; }
+  .about p { font-size: 17px; color: var(--ink-soft); }
+  .about__sign {
+    margin-top: 24px;
+    font-family: var(--f-serif);
+    font-style: italic;
+    color: var(--navy);
+  }
+  .about p + p { margin-top: 14px; }
+  .about strong { color: var(--navy); font-weight: 600; }
+
+  .thesis {
+    margin: 22px 0 26px;
+    padding: 20px 24px;
+    border-left: 3px solid var(--amber);
+    background:
+      linear-gradient(90deg, rgba(212,162,76,0.10), rgba(212,162,76,0.00) 70%);
+    border-radius: 0 10px 10px 0;
+  }
+  .thesis p {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: clamp(18px, 1.6vw, 22px);
+    color: var(--navy);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .thesis cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-family: var(--f-sans);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy-400);
+  }
+
+  /* ---------- Selected leadership ---------- */
+  .leadership__title {
+    font-size: clamp(28px, 3.2vw, 42px);
+    margin: 8px 0 14px;
+    max-width: 22ch;
+  }
+  .leadership__lede {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin-bottom: 34px;
+  }
+  .leadership__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .lead-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    box-shadow: 0 1px 0 rgba(11,31,58,0.02), 0 8px 24px rgba(11,31,58,0.04);
+    position: relative;
+  }
+  .lead-card__tag {
+    display: inline-block;
+    font-family: var(--f-sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber-dark, #A67726);
+    background: rgba(212,162,76,0.12);
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .lead-card h3 {
+    font-family: var(--f-serif);
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--navy);
+    margin: 0 0 16px;
+    letter-spacing: -0.3px;
+  }
+  .lead-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+  }
+  .lead-card__list li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    padding-left: 14px;
+    position: relative;
+  }
+  .lead-card__list li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 10px;
+    width: 6px; height: 6px;
+    background: var(--amber);
+    border-radius: 50%;
+  }
+  .lead-card__list li strong {
+    color: var(--navy);
+    font-weight: 600;
+    display: block;
+  }
+  .lead-card__list li span {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-dark, #A67726);
+    background: rgba(212,162,76,0.14);
+    padding: 2px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta {
+    padding: 90px 0;
+    background:
+      radial-gradient(50% 120% at 80% 0%, rgba(212,162,76,.18), transparent 60%),
+      var(--navy);
+    color: #fff;
+    text-align: center;
+  }
+  .cta h2 {
+    color: #fff;
+    font-size: clamp(32px, 4vw, 52px);
+    max-width: 20ch;
+    margin: 0 auto 18px;
+  }
+  .cta p { color: #B9C4D6; font-size: 18px; max-width: 60ch; margin: 0 auto 28px; }
+  .cta__row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: #07162B;
+    color: #9AA9C0;
+    padding: 60px 0 30px;
+    font-size: 14.5px;
+  }
+  footer a { color: #C9D4E6; transition: color .2s ease; }
+  footer a:hover { color: var(--amber); }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 44px;
+  }
+  .footer__brand { color: #fff; font-family: var(--f-serif); font-size: 22px; margin-bottom: 12px; display: inline-flex; align-items: center; gap: 10px; }
+  .footer__about { max-width: 36ch; }
+  .footer h4 { color: #fff; font-family: var(--f-sans); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; font-weight: 600; }
+  .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .footer__bottom {
+    border-top: 1px solid #162848;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13.5px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero__art { margin: 0 auto; max-width: 380px; }
+    .services { grid-template-columns: repeat(2, 1fr); }
+    .approach { grid-template-columns: 1fr; }
+    .practice { grid-template-columns: 1fr; padding: 40px; gap: 32px; }
+    .insights { grid-template-columns: 1fr; }
+    .about { grid-template-columns: 1fr; gap: 32px; }
+    .about__photo { max-width: 320px; margin: 0 auto; }
+    .leadership__grid { grid-template-columns: 1fr; gap: 16px; }
+    .trust__row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .footer__grid { grid-template-columns: 1fr 1fr; }
+    .section { padding: 72px 0; }
+  }
+  @media (max-width: 640px) {
+    .nav__links, .nav__cta .btn { display: none; }
+    .nav__toggle { display: inline-flex; }
+    .nav--open .nav__links {
+      display: flex;
+      position: absolute;
+      inset: 64px 0 auto 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 24px 20px;
+    }
+    .nav--open .nav__links a { padding: 12px 0; width: 100%; border-bottom: 1px solid var(--line); }
+    .nav--open .nav__links a:last-child { border-bottom: none; }
+    .services { grid-template-columns: 1fr; }
+    .hero { padding: 60px 0 40px; }
+    .practice { padding: 28px; }
+    .footer__grid { grid-template-columns: 1fr; }
+    .footer__bottom { flex-direction: column; }
+  }
+
+  /* ---------- Motion preferences ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    *,*::before,*::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+
+  /* ---------- Focus ring (a11y) ---------- */
+  a:focus-visible, button:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---------- Hero SVG styles ---------- */
+  .art-rays { animation: pulse 8s ease-in-out infinite; transform-origin: 50% 40%; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="brand" aria-label="ShadeBreaker Insights — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="nav-clip"><rect width="64" height="64" rx="12"/></clipPath>
+            <radialGradient id="nav-sky" cx="50%" cy="68%" r="68%" fx="50%" fy="70%">
+              <stop offset="0%"  stop-color="#F4D896"/>
+              <stop offset="25%" stop-color="#D4A24C"/>
+              <stop offset="55%" stop-color="#D4A24C" stop-opacity="0.4"/>
+              <stop offset="85%" stop-color="#0B1F3A"/>
+              <stop offset="100%" stop-color="#07162B"/>
+            </radialGradient>
+            <radialGradient id="nav-sun" cx="50%" cy="100%" r="75%">
+              <stop offset="0%"  stop-color="#FFF4C8"/>
+              <stop offset="55%" stop-color="#F4D896"/>
+              <stop offset="100%" stop-color="#D4A24C"/>
+            </radialGradient>
+          </defs>
+          <rect width="64" height="64" rx="12" fill="#07162B"/>
+          <rect width="64" height="64" rx="12" fill="url(#nav-sky)"/>
+          <g clip-path="url(#nav-clip)">
+            <path d="M14 44 A18 18 0 0 1 50 44 Z" fill="url(#nav-sun)"/>
+            <line x1="0" y1="44" x2="64" y2="44" stroke="#D4A24C" stroke-width="1.8"/>
+            <rect y="44" width="64" height="20" fill="#07162B"/>
+          </g>
+        </svg>
+      </span>
+      ShadeBreaker Insights
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#practice">Ministry practice</a>
+      <a href="#insights">Insights</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a href="#contact" class="btn btn--primary">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<main id="top">
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <h1>Clarity through <em>contrast.</em></h1>
+      <p class="hero__lede">
+        ShadeBreaker Insights helps leaders turn ambiguity into a plan — and plans into measurable outcomes.
+        Strategy, operations, and leadership advisory for businesses, nonprofits, para-church ministries, and the churches they serve.
+      </p>
+      <p class="hero__audience">
+        Built for the CEOs, pastors, and executive pastors carrying the weight of the next decision.
+      </p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">Start a conversation <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#approach" class="btn btn--ghost">See our approach</a>
+      </div>
+      <div class="hero__meta">
+        <span><strong>Independent</strong> advisory</span>
+        <span><strong>Senior</strong>-led engagements</span>
+        <span><strong>Outcome</strong>-based scoping</span>
+      </div>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="hero-clip"><rect x="20" y="20" width="360" height="460" rx="24"/></clipPath>
+          <radialGradient id="hero-sky" cx="50%" cy="72%" r="75%" fx="50%" fy="72%">
+            <stop offset="0%"  stop-color="#F4D896" stop-opacity="1"/>
+            <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
+            <stop offset="50%" stop-color="#D4A24C" stop-opacity="0.38"/>
+            <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#07162B" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="hero-sun" cx="50%" cy="100%" r="80%">
+            <stop offset="0%"  stop-color="#FFF4C8"/>
+            <stop offset="55%" stop-color="#F4D896"/>
+            <stop offset="100%" stop-color="#D4A24C"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Dark base -->
+        <rect x="20" y="20" width="360" height="460" rx="24" fill="#07162B"/>
+        <!-- Atmospheric glow -->
+        <rect x="20" y="20" width="360" height="460" rx="24" fill="url(#hero-sky)"/>
+
+        <g clip-path="url(#hero-clip)">
+          <!-- Subtle concentric arcs for layered depth of propagation -->
+          <g fill="none" stroke="#D4A24C">
+            <path d="M 20 340 A 180 180 0 0 1 380 340" stroke-width="1" stroke-opacity="0.25"/>
+            <path d="M 60 340 A 140 140 0 0 1 340 340" stroke-width="1.2" stroke-opacity="0.4"/>
+            <path d="M 110 340 A 90 90 0 0 1 290 340" stroke-width="1.4" stroke-opacity="0.6"/>
+          </g>
+
+          <!-- Sun half-disc -->
+          <path d="M 140 340 A 60 60 0 0 1 260 340 Z" fill="url(#hero-sun)"/>
+
+          <!-- Horizon line -->
+          <line x1="20" y1="340" x2="380" y2="340" stroke="#D4A24C" stroke-width="2.5"/>
+
+          <!-- Dark ground -->
+          <rect x="20" y="340" width="360" height="140" fill="#07162B"/>
+
+          <!-- Subtle brand ornament in the dark ground -->
+          <g transform="translate(200 410)">
+            <line x1="-40" y1="0" x2="40" y2="0" stroke="#D4A24C" stroke-width="0.8" stroke-opacity="0.5"/>
+            <circle r="2" fill="#D4A24C" fill-opacity="0.6"/>
+          </g>
+        </g>
+
+        <!-- Soft outer edge -->
+        <rect x="20" y="20" width="360" height="460" rx="24" fill="none" stroke="#243858" stroke-width="1" stroke-opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TRUST BAR ============== -->
+<section class="trust" aria-label="Industries we serve">
+  <div class="wrap">
+    <div class="trust__label">Trusted across sectors</div>
+    <div class="trust__row">
+      <div class="trust__item">Financial Services</div>
+      <div class="trust__item">FinTech</div>
+      <div class="trust__item">Healthcare</div>
+      <div class="trust__item">Nonprofits</div>
+      <div class="trust__item">Ministries &amp; Churches</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SERVICES ============== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">What we do</span>
+      <h2>Advisory built around the problems leaders actually carry.</h2>
+      <p>We don't sell frameworks. We meet leaders where they are — with the analysis, experience, and honest counsel required to make the next decision well.</p>
+    </div>
+
+    <div class="services">
+      <div class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        </div>
+        <h3>Strategy &amp; Planning</h3>
+        <p>Where should you invest the next two years? We pressure-test the vision, sharpen priorities, and build plans that survive contact with reality.</p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+        </div>
+        <h3>Operations &amp; Process</h3>
+        <p>Mapping what's broken, designing what's better, and helping the team adopt it. Operational improvement that actually sticks after we're gone.</p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        </div>
+        <h3>Leadership &amp; Coaching</h3>
+        <p>One-on-one advisory for executives, founders, and senior pastors navigating transitions, growth, or seasons that feel stuck.</p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>Ministry Practice</h3>
+        <p>A dedicated practice for churches, denominations, and faith-based nonprofits — operations, governance, staffing, and stewardship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== APPROACH ============== -->
+<section class="section section--navy" id="approach">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Our approach</span>
+      <h2>Three phases. No bloated decks. No wasted retainers.</h2>
+      <p>Every engagement moves through the same deliberate sequence — so leaders always know where they are, what comes next, and why it matters.</p>
+    </div>
+
+    <div class="approach">
+      <div class="step">
+        <span class="step__num">Phase 01 — Illuminate</span>
+        <h3>Name what's actually happening.</h3>
+        <p>We start with unvarnished diagnosis. Interviews, data, a hard look at the real problem underneath the stated one. No flattery. No consultant-speak.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">Phase 02 — Architect</span>
+        <h3>Design a plan that fits the team.</h3>
+        <p>A clear strategy, sequenced moves, and the operating changes required to get there. Shaped for your capacity and calendar — not an idealized org.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">Phase 03 — Accompany</span>
+        <h3>Stay long enough for it to stick.</h3>
+        <p>Implementation is where most plans die. We stay close through the first execution cycles — coaching leaders, adjusting the plan, and building internal ownership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAITH-BASED PRACTICE ============== -->
+<section class="section section--cream" id="practice">
+  <div class="wrap">
+    <div class="practice">
+      <div>
+        <span class="practice__tag">Ministry Practice</span>
+        <h2>For the leaders called to the work of the Church.</h2>
+        <p>
+          Churches and ministries carry a burden secular organizations rarely do —
+          they're accountable for mission, margin, and a sacred trust at once.
+          Our Ministry Practice brings the same rigor we bring to boardrooms,
+          shaped by a deep respect for how the Church actually works.
+        </p>
+        <ul>
+          <li>Strategic planning for churches, denominations, and ministry networks</li>
+          <li>Board governance and senior-pastor transition support</li>
+          <li>Operational design — staffing, stewardship, and systems</li>
+          <li>Revitalization counsel for congregations in a new season</li>
+        </ul>
+        <a href="#contact" class="btn btn--accent">Explore ministry engagements <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero__art" style="max-width:none;margin:0;aspect-ratio:5/4;" aria-hidden="true">
+        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="min-clip"><rect width="500" height="400" rx="16"/></clipPath>
+            <radialGradient id="min-sky" cx="50%" cy="78%" r="70%">
+              <stop offset="0%"  stop-color="#F4D896" stop-opacity="1"/>
+              <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
+              <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
+              <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#07162B" stop-opacity="1"/>
+            </radialGradient>
+            <radialGradient id="min-sun" cx="50%" cy="100%" r="80%">
+              <stop offset="0%"  stop-color="#FFF4C8"/>
+              <stop offset="55%" stop-color="#F4D896"/>
+              <stop offset="100%" stop-color="#D4A24C"/>
+            </radialGradient>
+          </defs>
+
+          <rect width="500" height="400" rx="16" fill="#07162B"/>
+          <rect width="500" height="400" rx="16" fill="url(#min-sky)"/>
+
+          <g clip-path="url(#min-clip)">
+            <!-- Subtle atmospheric arcs -->
+            <g fill="none" stroke="#D4A24C">
+              <path d="M 50 310 A 200 200 0 0 1 450 310" stroke-width="1" stroke-opacity="0.25"/>
+              <path d="M 110 310 A 140 140 0 0 1 390 310" stroke-width="1.2" stroke-opacity="0.4"/>
+            </g>
+
+            <!-- Sun rising (behind the chapel) -->
+            <path d="M 180 310 A 70 70 0 0 1 320 310 Z" fill="url(#min-sun)"/>
+
+            <!-- Chapel silhouetted against the dawn -->
+            <g transform="translate(250 310)">
+              <!-- Main body (solid dark against the bright horizon glow) -->
+              <path d="M -50 0 L -50 -55 L 0 -85 L 50 -55 L 50 0 Z" fill="#07162B"/>
+              <!-- Spire -->
+              <path d="M -5 -85 L 0 -118 L 5 -85 Z" fill="#07162B"/>
+              <!-- Cross on spire — amber so it reads against the darker upper sky -->
+              <g stroke="#D4A24C" stroke-width="2" stroke-linecap="round">
+                <line x1="0" y1="-140" x2="0" y2="-118"/>
+                <line x1="-6" y1="-132" x2="6" y2="-132"/>
+              </g>
+            </g>
+
+            <!-- Horizon line -->
+            <line x1="0" y1="310" x2="500" y2="310" stroke="#D4A24C" stroke-width="2"/>
+
+            <!-- Dark ground -->
+            <rect y="310" width="500" height="90" fill="#07162B"/>
+          </g>
+
+          <rect width="500" height="400" rx="16" fill="none" stroke="#243858" stroke-width="1" stroke-opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INSIGHTS ============== -->
+<section class="section" id="insights">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Insights &middot; The Flourishing Series</span>
+      <h2>A four-part body of work on what the Church is quietly becoming.</h2>
+      <p>Four essays, meant to be read in order. A diagnosis, an anatomy, a recovery, and a posture &mdash; for leaders who sense something has subtly shifted in how their organization defines the win, and who want to think clearly about it before the next planning cycle.</p>
+    </div>
+
+    <div class="insights">
+      <article class="article article--featured">
+        <div class="article__img" aria-hidden="true">
+          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+            <defs>
+              <linearGradient id="ft-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0B1F3A"/>
+                <stop offset="100%" stop-color="#132a4d"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="200" fill="url(#ft-bg)"/>
+            <!-- Small sun accent, upper right — brand echo -->
+            <circle cx="278" cy="36" r="13" fill="#F4D896" opacity="0.95"/>
+            <g stroke="#D4A24C" stroke-width="0.9" stroke-linecap="round" opacity="0.55">
+              <line x1="278" y1="14" x2="278" y2="19"/>
+              <line x1="278" y1="53" x2="278" y2="58"/>
+              <line x1="256" y1="36" x2="261" y2="36"/>
+              <line x1="295" y1="36" x2="300" y2="36"/>
+              <line x1="262" y1="20" x2="266" y2="24"/>
+              <line x1="290" y1="48" x2="294" y2="52"/>
+              <line x1="294" y1="20" x2="290" y2="24"/>
+              <line x1="266" y1="48" x2="262" y2="52"/>
+            </g>
+
+            <!-- Faint horizon baseline -->
+            <line x1="30" y1="170" x2="290" y2="170" stroke="#3a527a" stroke-width="0.8" stroke-dasharray="3 5" opacity="0.5"/>
+
+            <!-- Ascending laurel stem -->
+            <path d="M80 180 C 80 150, 105 130, 125 105 S 160 60, 180 45"
+                  stroke="#D4A24C" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.85"/>
+
+            <!-- Leaves along the stem -->
+            <g fill="#D4A24C" opacity="0.78">
+              <ellipse cx="95" cy="148" rx="15" ry="5.5" transform="rotate(-40 95 148)"/>
+              <ellipse cx="72" cy="162" rx="13" ry="4.5" transform="rotate(35 72 162)"/>
+              <ellipse cx="122" cy="108" rx="14" ry="5" transform="rotate(-20 122 108)"/>
+              <ellipse cx="106" cy="122" rx="12" ry="4.5" transform="rotate(40 106 122)"/>
+              <ellipse cx="152" cy="75" rx="12" ry="4.5" transform="rotate(-10 152 75)"/>
+              <ellipse cx="140" cy="90" rx="11" ry="4" transform="rotate(35 140 90)"/>
+              <ellipse cx="172" cy="55" rx="10" ry="4" transform="rotate(-25 172 55)"/>
+            </g>
+
+            <!-- At the crown: the "bloom" is replaced by a metric bar chart -->
+            <g transform="translate(200 30)">
+              <rect x="0" y="-4" width="9" height="22" fill="#F4D896" opacity="0.85"/>
+              <rect x="13" y="-14" width="9" height="32" fill="#F4D896"/>
+              <rect x="26" y="-24" width="9" height="42" fill="#D4A24C"/>
+              <line x1="-3" y1="20" x2="40" y2="20" stroke="#D4A24C" stroke-width="0.8" opacity="0.6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="article__body">
+          <span class="article__tag">Ministry &amp; Strategy</span>
+          <h3>The Flourishing Trap: how a borrowed word is reshaping the Church.</h3>
+          <p>A quiet word is moving through academia, Silicon Valley, and the Church — a word that sounds biblical but isn't. A warning, and a diagnostic for leaders.</p>
+          <a href="insights/the-flourishing-trap.html" class="article__more">Read the essay <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__img" aria-hidden="true">
+          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+            <defs>
+              <linearGradient id="qd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0B1F3A"/>
+                <stop offset="100%" stop-color="#132a4d"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="200" fill="url(#qd-bg)"/>
+            <!-- Small sun accent, upper right — brand echo -->
+            <circle cx="278" cy="36" r="13" fill="#F4D896" opacity="0.95"/>
+            <g stroke="#D4A24C" stroke-width="0.9" stroke-linecap="round" opacity="0.55">
+              <line x1="278" y1="14" x2="278" y2="19"/>
+              <line x1="278" y1="53" x2="278" y2="58"/>
+              <line x1="256" y1="36" x2="261" y2="36"/>
+              <line x1="295" y1="36" x2="300" y2="36"/>
+              <line x1="262" y1="20" x2="266" y2="24"/>
+              <line x1="290" y1="48" x2="294" y2="52"/>
+              <line x1="294" y1="20" x2="290" y2="24"/>
+              <line x1="266" y1="48" x2="262" y2="52"/>
+            </g>
+
+            <!-- Compass rose at origin -->
+            <g transform="translate(55 100)">
+              <circle r="13" fill="none" stroke="#D4A24C" stroke-width="1" opacity="0.75"/>
+              <circle r="21" fill="none" stroke="#D4A24C" stroke-width="0.6" opacity="0.35"/>
+              <line x1="-18" y1="0" x2="18" y2="0" stroke="#D4A24C" stroke-width="0.8" opacity="0.55"/>
+              <line x1="0" y1="-18" x2="0" y2="18" stroke="#D4A24C" stroke-width="0.8" opacity="0.55"/>
+              <circle r="2.5" fill="#F4D896"/>
+            </g>
+
+            <!-- Intended bearing: straight dashed -->
+            <line x1="70" y1="100" x2="278" y2="100" stroke="#F4D896" stroke-width="1.4" stroke-dasharray="5 5" opacity="0.55"/>
+            <circle cx="278" cy="100" r="2.8" fill="#F4D896" opacity="0.6"/>
+
+            <!-- Actual bearing: subtle drift downward -->
+            <path d="M70 100 Q 175 110, 278 150" stroke="#D4A24C" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <circle cx="278" cy="150" r="4.5" fill="#D4A24C"/>
+
+            <!-- Small delta/arc indicating degrees of drift -->
+            <path d="M268 100 A 45 45 0 0 1 278 150" stroke="#D4A24C" stroke-width="0.9" fill="none" opacity="0.65" stroke-dasharray="2 3"/>
+            <text x="248" y="132" fill="#F4D896" font-family="Inter, sans-serif" font-size="11" opacity="0.85" font-weight="600">1°</text>
+          </svg>
+        </div>
+        <div class="article__body">
+          <span class="article__tag">Strategy &amp; Mission</span>
+          <h3>The Quiet Drift: how a misaligned aim reshapes every system you lead.</h3>
+          <p>Organizations fail every day &mdash; but the failure rarely traces to a single cataclysmic moment. It traces to a slow drift away from mission, until the scorecard reads green and the mission is already gone.</p>
+          <a href="insights/the-quiet-drift.html" class="article__more">Read the essay <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__img" aria-hidden="true">
+          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+            <defs>
+              <linearGradient id="sc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0B1F3A"/>
+                <stop offset="100%" stop-color="#132a4d"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="200" fill="url(#sc-bg)"/>
+            <!-- Small sun accent, upper right — brand echo -->
+            <circle cx="278" cy="36" r="13" fill="#F4D896" opacity="0.95"/>
+            <g stroke="#D4A24C" stroke-width="0.9" stroke-linecap="round" opacity="0.55">
+              <line x1="278" y1="14" x2="278" y2="19"/>
+              <line x1="278" y1="53" x2="278" y2="58"/>
+              <line x1="256" y1="36" x2="261" y2="36"/>
+              <line x1="295" y1="36" x2="300" y2="36"/>
+              <line x1="262" y1="20" x2="266" y2="24"/>
+              <line x1="290" y1="48" x2="294" y2="52"/>
+              <line x1="294" y1="20" x2="290" y2="24"/>
+              <line x1="266" y1="48" x2="262" y2="52"/>
+            </g>
+
+            <!-- Clipboard / scorecard -->
+            <g transform="translate(95 25)">
+              <!-- Document body -->
+              <rect width="130" height="150" rx="6" fill="#F7F3EC" opacity="0.97"/>
+              <!-- Clipboard clip -->
+              <rect x="45" y="-6" width="40" height="12" rx="2.5" fill="#D4A24C"/>
+              <rect x="55" y="-4" width="20" height="8" rx="1.5" fill="#A67726"/>
+
+              <!-- Header bars -->
+              <rect x="14" y="20" width="72" height="4" rx="2" fill="#0B1F3A" opacity="0.7"/>
+              <rect x="14" y="29" width="46" height="3" rx="1.5" fill="#0B1F3A" opacity="0.3"/>
+
+              <!-- Checklist rows -->
+              <g font-family="Inter, sans-serif">
+                <!-- Row 1 -->
+                <circle cx="22" cy="52" r="4.2" fill="none" stroke="#0B1F3A" stroke-width="1.1"/>
+                <path d="M19.5 52 L21.5 54 L24.5 49.5" stroke="#0B1F3A" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="32" y="49" width="78" height="3" rx="1.5" fill="#0B1F3A" opacity="0.45"/>
+
+                <!-- Row 2 -->
+                <circle cx="22" cy="68" r="4.2" fill="none" stroke="#0B1F3A" stroke-width="1.1"/>
+                <path d="M19.5 68 L21.5 70 L24.5 65.5" stroke="#0B1F3A" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="32" y="65" width="62" height="3" rx="1.5" fill="#0B1F3A" opacity="0.45"/>
+
+                <!-- Row 3 — highlighted amber (the measure that became the target) -->
+                <circle cx="22" cy="84" r="4.6" fill="#D4A24C" stroke="#A67726" stroke-width="0.8"/>
+                <path d="M19.3 84 L21.5 86 L24.8 81.8" stroke="#F7F3EC" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="32" y="81" width="84" height="3" rx="1.5" fill="#D4A24C"/>
+
+                <!-- Row 4 — unchecked -->
+                <circle cx="22" cy="100" r="4.2" fill="none" stroke="#0B1F3A" stroke-width="1.1"/>
+                <rect x="32" y="97" width="55" height="3" rx="1.5" fill="#0B1F3A" opacity="0.35"/>
+              </g>
+
+              <!-- Mini bar chart -->
+              <g transform="translate(16 116)">
+                <line x1="-2" y1="28" x2="100" y2="28" stroke="#0B1F3A" stroke-width="0.9" opacity="0.55"/>
+                <rect x="0" y="16" width="10" height="12" fill="#0B1F3A" opacity="0.7"/>
+                <rect x="16" y="8" width="10" height="20" fill="#0B1F3A" opacity="0.7"/>
+                <rect x="32" y="2" width="10" height="26" fill="#D4A24C"/>
+                <rect x="48" y="12" width="10" height="16" fill="#0B1F3A" opacity="0.7"/>
+                <rect x="64" y="6" width="10" height="22" fill="#0B1F3A" opacity="0.7"/>
+                <rect x="80" y="14" width="10" height="14" fill="#0B1F3A" opacity="0.7"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="article__body">
+          <span class="article__tag">Measurement &amp; Mission</span>
+          <h3>The Scorecard Problem: every scorecard is a discipleship document.</h3>
+          <p>What you measure is what your team will, in time, become. A constructive guide to designing measurement that survives the mission.</p>
+          <a href="insights/the-scorecard-problem.html" class="article__more">Read the essay <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article__img" aria-hidden="true">
+          <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+            <defs>
+              <linearGradient id="mb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0B1F3A"/>
+                <stop offset="100%" stop-color="#132a4d"/>
+              </linearGradient>
+              <radialGradient id="mb-sun" cx="50%" cy="100%" r="78%">
+                <stop offset="0%" stop-color="#FFF4C8"/>
+                <stop offset="45%" stop-color="#F4D896"/>
+                <stop offset="100%" stop-color="#D4A24C"/>
+              </radialGradient>
+            </defs>
+            <rect width="320" height="200" fill="url(#mb-bg)"/>
+
+            <!-- Sunrise disc (echoes the ShadeBreaker brand mark) -->
+            <g transform="translate(220 118)">
+              <path d="M-48 0 A 48 48 0 0 1 48 0 Z" fill="url(#mb-sun)"/>
+              <!-- Sun rays -->
+              <g stroke="#F4D896" stroke-width="1" opacity="0.55" stroke-linecap="round">
+                <line x1="-60" y1="0" x2="-53" y2="0"/>
+                <line x1="53" y1="0" x2="60" y2="0"/>
+                <line x1="-43" y1="-30" x2="-38" y2="-26"/>
+                <line x1="43" y1="-30" x2="38" y2="-26"/>
+                <line x1="-22" y1="-48" x2="-19" y2="-40"/>
+                <line x1="22" y1="-48" x2="19" y2="-40"/>
+                <line x1="0" y1="-56" x2="0" y2="-49"/>
+              </g>
+            </g>
+
+            <!-- Horizon line -->
+            <line x1="20" y1="118" x2="300" y2="118" stroke="#D4A24C" stroke-width="1" opacity="0.6"/>
+
+            <!-- Gears in the foreground — the system, sitting under the sunrise -->
+            <!-- Gear 1 (larger, left) -->
+            <g transform="translate(92 148)">
+              <g fill="#0B1F3A" stroke="#D4A24C" stroke-width="1.3">
+                <g>
+                  <rect x="-3.5" y="-31" width="7" height="8" rx="1"/>
+                  <rect x="-3.5" y="23" width="7" height="8" rx="1"/>
+                  <rect x="-31" y="-3.5" width="8" height="7" rx="1"/>
+                  <rect x="23" y="-3.5" width="8" height="7" rx="1"/>
+                  <g transform="rotate(45)">
+                    <rect x="-3.5" y="-31" width="7" height="8" rx="1"/>
+                    <rect x="-3.5" y="23" width="7" height="8" rx="1"/>
+                    <rect x="-31" y="-3.5" width="8" height="7" rx="1"/>
+                    <rect x="23" y="-3.5" width="8" height="7" rx="1"/>
+                  </g>
+                </g>
+                <circle r="24"/>
+                <circle r="9" fill="#132a4d"/>
+                <circle r="3" fill="#D4A24C" stroke="none"/>
+              </g>
+            </g>
+
+            <!-- Gear 2 (smaller, middle-left) -->
+            <g transform="translate(148 168)">
+              <g fill="#0B1F3A" stroke="#D4A24C" stroke-width="1.1">
+                <g>
+                  <rect x="-2.5" y="-21" width="5" height="6" rx="1"/>
+                  <rect x="-2.5" y="15" width="5" height="6" rx="1"/>
+                  <rect x="-21" y="-2.5" width="6" height="5" rx="1"/>
+                  <rect x="15" y="-2.5" width="6" height="5" rx="1"/>
+                  <g transform="rotate(45)">
+                    <rect x="-2.5" y="-21" width="5" height="6" rx="1"/>
+                    <rect x="-2.5" y="15" width="5" height="6" rx="1"/>
+                    <rect x="-21" y="-2.5" width="6" height="5" rx="1"/>
+                    <rect x="15" y="-2.5" width="6" height="5" rx="1"/>
+                  </g>
+                </g>
+                <circle r="16"/>
+                <circle r="6" fill="#132a4d"/>
+              </g>
+            </g>
+
+            <!-- Dark foreground base to ground the gears -->
+            <rect x="0" y="190" width="320" height="10" fill="#07162B"/>
+          </svg>
+        </div>
+        <div class="article__body">
+          <span class="article__tag">Leadership &amp; Human Work</span>
+          <h3>Managing Beyond the Scorecard: systems are good, people are better.</h3>
+          <p>In the age of AI, automation, and operating platforms that promise to run the company for you, the leader&rsquo;s most important work is still the human one. A case for the Spirit over the spreadsheet &mdash; and against the Pharisee trap.</p>
+          <a href="insights/managing-beyond-the-scorecard.html" class="article__more">Read the essay <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section class="section section--cream" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="about__photo">
+        <img src="brand/founder-portrait.jpg" alt="Brandon Harvath" width="866" height="1299" loading="eager" decoding="async" fetchpriority="high" />
+      </div>
+      <div>
+        <span class="eyebrow">About Brandon</span>
+        <h2>Thirty years of leading complex enterprises — from Fortune 500 operations to the global mission field.</h2>
+
+        <blockquote class="thesis">
+          <p>&ldquo;Driving strategic innovation. Kicking out the shadows. Bringing clarity to mission.&rdquo;</p>
+          <cite>Brandon Harvath</cite>
+        </blockquote>
+
+        <p>
+          Across three decades Brandon has served as <strong>President &amp; Chief Executive
+          Officer</strong>, <strong>Chief Operating Officer</strong>, and <strong>Chief Administrative
+          Officer</strong>, and as a senior operating executive inside some of the largest enterprises
+          in America — carrying P&amp;L accountability, national-scale operations, and the unglamorous
+          discipline of making complex organizations actually do what they say they will do.
+        </p>
+        <p>
+          His Fortune 500 career spans more than a decade of operations leadership in
+          <strong>financial services</strong> — inside one of the largest consumer banks in the
+          United States and the category-defining credit-card company it absorbed — running
+          large-scale, regulated money-movement systems. From there he moved into
+          <strong>global health benefits</strong>, leading service operations inside a Fortune 500
+          global benefits insurer and holding senior operations posts at two of the largest Blue
+          Cross Blue Shield plans in the country. Foundations built on customer scale, regulatory
+          complexity, and the discipline of running things that cannot afford to break.
+        </p>
+        <p>
+          From those seats he moved into the top chair. As <strong>President &amp; Chief Executive
+          Officer of a faith-rooted regional hospital system</strong>, he led the organization through
+          the onset and full weight of a <strong>global pandemic</strong> &mdash; protecting
+          caregivers, patients, and finances while the ground shifted under the industry every week.
+          He counts those years as one of the most challenging leadership experiences of his life, a
+          season of clear divine appointment and providence that formed and hardened his resolve as a
+          leader in ways no classroom ever could. He then served as <strong>President &amp; Chief
+          Executive Officer of one of the largest and longest-running healthcare-sharing ministries in
+          the United States</strong> &mdash; a national, member-funded alternative to traditional
+          health insurance &mdash; leading turnarounds, growth plans, and governance at the
+          intersection of mission and margin.
+        </p>
+        <p>
+          That ministry, beneath its insurance-adjacent surface, is effectively a
+          <strong>fintech platform</strong> &mdash; a complex, regulated system moving hundreds of
+          millions of dollars among hundreds of thousands of members every month, on infrastructure
+          built and continually rebuilt for that purpose. Brandon&rsquo;s tenure there fused his two
+          deepest operating disciplines &mdash; financial services and health benefits &mdash; into a
+          single innovative platform and put both on hyperdrive. It is one of the more unusual
+          fintech apprenticeships in the country, and it shapes how he thinks about regulated,
+          mission-driven money systems to this day.
+        </p>
+        <p>
+          Today he serves as <strong>Chief Administrative Officer of one of the world&rsquo;s largest
+          Christian ministries</strong> — the strategic leader over the business of the ministry in a
+          global movement reaching coaches and athletes across more than 100 countries. It is, in
+          every meaningful sense, the culmination of the arc: Fortune 500 discipline applied to a
+          global cause.
+        </p>
+        <p>
+          That arc — boardroom and sanctuary, P&amp;L and calling, Wall Street rigor and Kingdom
+          mission — is not two careers stitched together. It is one conviction lived out in two
+          settings: that <em>God is pure light, that confusion is simply the absence of that light,
+          and that the leader&rsquo;s job is to close the gap</em>. That is the work of ShadeBreaker
+          Insights.
+        </p>
+        <p>
+          Brandon has served on non-profit boards, lives on Florida&rsquo;s Space Coast, and is
+          available to clients globally.
+        </p>
+        <p>
+          Every engagement is senior-led. The person you meet in the first conversation is the person
+          doing the work.
+        </p>
+        <p class="about__sign">— Brandon Harvath</p>
+        <div style="margin-top:20px;">
+          <a href="#contact" class="btn btn--primary">Schedule an intro call <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SELECTED LEADERSHIP ============== -->
+<section class="section section--cream" id="leadership" style="padding-top:0;">
+  <div class="wrap">
+    <span class="eyebrow">The arc</span>
+    <h2 class="leadership__title">The arc behind the practice.</h2>
+    <p class="leadership__lede">
+      Three decades, three multiple vantage points, one through-line: taking large, complex organizations and
+      helping them achieve and stay true to their mission.
+    </p>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Tell us what's keeping you up at night.</h2>
+    <p>A 30-minute introductory call, no prep required. We'll listen, ask a few questions, and tell you honestly whether we're the right fit.</p>
+    <div class="cta__row">
+      <a href="mailto:insights@shadebreaker.com?subject=ShadeBreaker%20%E2%80%94%20Intro%20conversation&amp;body=Hi%20Brandon%2C%0A%0AI%27d%20like%20to%20set%20up%20a%20short%20intro%20call.%20A%20few%20things%20about%20the%20situation%3A%0A%0A%E2%80%A2%20Organization%3A%0A%E2%80%A2%20Role%3A%0A%E2%80%A2%20What%27s%20on%20your%20mind%3A%0A%0AThanks." class="btn btn--accent">Email us <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="mailto:insights@shadebreaker.com?subject=ShadeBreaker%20%E2%80%94%20Book%20a%2030-minute%20call&amp;body=Hi%20Brandon%2C%0A%0AI%27d%20like%20to%20book%20a%2030-minute%20intro%20call.%20A%20few%20windows%20that%20work%20on%20my%20end%3A%0A%0A1.%20%0A2.%20%0A3.%20%0A%0ATime%20zone%3A%0A%0AShort%20context%3A%0A%0AThanks." class="btn btn--ghost-light">Book a 30-minute call</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="ftr-clip"><rect width="64" height="64" rx="12"/></clipPath>
+                <radialGradient id="ftr-sky" cx="50%" cy="68%" r="68%" fx="50%" fy="70%">
+                  <stop offset="0%"  stop-color="#F4D896"/>
+                  <stop offset="25%" stop-color="#D4A24C"/>
+                  <stop offset="55%" stop-color="#D4A24C" stop-opacity="0.4"/>
+                  <stop offset="85%" stop-color="#0B1F3A"/>
+                  <stop offset="100%" stop-color="#07162B"/>
+                </radialGradient>
+                <radialGradient id="ftr-sun" cx="50%" cy="100%" r="75%">
+                  <stop offset="0%"  stop-color="#FFF4C8"/>
+                  <stop offset="55%" stop-color="#F4D896"/>
+                  <stop offset="100%" stop-color="#D4A24C"/>
+                </radialGradient>
+              </defs>
+              <rect width="64" height="64" rx="12" fill="#07162B"/>
+              <rect width="64" height="64" rx="12" fill="url(#ftr-sky)"/>
+              <g clip-path="url(#ftr-clip)">
+                <path d="M14 44 A18 18 0 0 1 50 44 Z" fill="url(#ftr-sun)"/>
+                <line x1="0" y1="44" x2="64" y2="44" stroke="#D4A24C" stroke-width="1.8"/>
+                <rect y="44" width="64" height="20" fill="#07162B"/>
+              </g>
+            </svg>
+          </span>
+          ShadeBreaker Insights
+        </span>
+        <p class="footer__about">Independent management consulting for leaders who need clarity — in the marketplace and in the ministry.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Strategy &amp; Planning</a></li>
+          <li><a href="#services">Operations &amp; Process</a></li>
+          <li><a href="#services">Leadership &amp; Coaching</a></li>
+          <li><a href="#practice">Ministry Practice</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About the founder</a></li>
+          <li><a href="#leadership">Selected leadership</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#approach">Our approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:insights@shadebreaker.com">insights@shadebreaker.com</a></li>
+          <li><a href="https://www.linkedin.com/in/bharvath" rel="noopener" target="_blank">LinkedIn — /in/bharvath</a></li>
+          <li><a href="mailto:insights@shadebreaker.com?subject=Subscribe%20to%20ShadeBreaker%20Insights&amp;body=Please%20add%20me%20to%20the%20Insights%20list.%0A%0AName%3A%0ARole%2Forganization%3A%0A%0AThanks.">Subscribe to Insights</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© <span id="yr"></span> ShadeBreaker Insights. All rights reserved.</div>
+      <div><a href="privacy.html">Privacy</a> &nbsp; · &nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Current year in footer
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile nav toggle
+  const toggle = document.getElementById('navToggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('nav--open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  // Close on link click (mobile)
+  document.querySelectorAll('.nav__links a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('nav--open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
