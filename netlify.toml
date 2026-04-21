@@ -1,23 +1,29 @@
-# Design iteration / scratch files — kept locally, not deployed
-01-research-findings.md
-02-logo-concepts.html
-03-logo-concepts-v2.html
-04-dayspring-iterations.html
-05-dayspring-round2.html
-06-dayspring-cross.html
-07-brand-kit.html
-DEPLOYMENT.md
+# ShadeBreaker Insights — Netlify configuration
+# Static HTML site, no build step. Publish from repo root (Netlify default).
 
-# Generated Word versions of essays (for your reference, not for the web)
-insights/docx/
+# ------------------------------------------------------------
+# Security headers (applied to every response)
+# ------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
 
-# OS / editor cruft
-.DS_Store
-Thumbs.db
-*.swp
-*~
-.idea/
-.vscode/
+# ------------------------------------------------------------
+# Long cache for immutable brand assets and SVG illustrations
+# ------------------------------------------------------------
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Netlify local state (if netlify-cli is ever used)
-.netlify/
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+  
