@@ -34,6 +34,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+<!-- SavvyCal embed script (enables popup scheduler on any element with data-savvycal-link) -->
+<script src="https://embed.savvycal.com/v1/embed.js" async></script>
+<script>
+  window.SavvyCal = window.SavvyCal || function() { (SavvyCal.q = SavvyCal.q || []).push(arguments); };
+  SavvyCal('init');
+</script>
+
 <style>
   /* ---------- Design tokens ---------- */
   :root {
@@ -782,7 +789,7 @@
     </nav>
 
     <div class="nav__cta">
-      <a href="#contact" class="btn btn--primary">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="/schedule/" data-savvycal-link="brandonharvath/discovery" class="btn btn--primary">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -1405,7 +1412,7 @@
         </p>
         <p class="about__sign">— Brandon Harvath</p>
         <div style="margin-top:20px;">
-          <a href="#contact" class="btn btn--primary">Schedule an intro call <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="/schedule/" data-savvycal-link="brandonharvath/discovery" class="btn btn--primary">Schedule an intro call <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
@@ -1431,8 +1438,9 @@
     <h2>Tell us what's keeping you up at night.</h2>
     <p>A 30-minute introductory call, no prep required. We'll listen, ask a few questions, and tell you honestly whether we're the right fit.</p>
     <div class="cta__row">
-      <a href="mailto:insights@shadebreaker.com?subject=ShadeBreaker%20%E2%80%94%20Intro%20conversation&amp;body=Hi%20Brandon%2C%0A%0AI%27d%20like%20to%20set%20up%20a%20short%20intro%20call.%20A%20few%20things%20about%20the%20situation%3A%0A%0A%E2%80%A2%20Organization%3A%0A%E2%80%A2%20Role%3A%0A%E2%80%A2%20What%27s%20on%20your%20mind%3A%0A%0AThanks." class="btn btn--accent">Email us <span class="arrow" aria-hidden="true">→</span></a>
-      <a href="mailto:insights@shadebreaker.com?subject=ShadeBreaker%20%E2%80%94%20Book%20a%2030-minute%20call&amp;body=Hi%20Brandon%2C%0A%0AI%27d%20like%20to%20book%20a%2030-minute%20intro%20call.%20A%20few%20windows%20that%20work%20on%20my%20end%3A%0A%0A1.%20%0A2.%20%0A3.%20%0A%0ATime%20zone%3A%0A%0AShort%20context%3A%0A%0AThanks." class="btn btn--ghost-light">Book a 30-minute call</a>
+      <a href="/schedule/" data-savvycal-link="brandonharvath/discovery" class="btn btn--accent">Book a 30-minute call <span class="arrow" aria-hidden="true">→</span></a>
+      <a href="/schedule/" class="btn btn--ghost-light">See all meeting types</a>
+      <a href="mailto:insights@shadebreaker.com?subject=ShadeBreaker%20%E2%80%94%20Intro%20conversation&amp;body=Hi%20Brandon%2C%0A%0AI%27d%20like%20to%20set%20up%20a%20short%20intro%20call.%20A%20few%20things%20about%20the%20situation%3A%0A%0A%E2%80%A2%20Organization%3A%0A%E2%80%A2%20Role%3A%0A%E2%80%A2%20What%27s%20on%20your%20mind%3A%0A%0AThanks." class="btn btn--ghost-light">Or email directly</a>
     </div>
   </div>
 </section>
@@ -1490,6 +1498,7 @@
           <li><a href="#leadership">Selected leadership</a></li>
           <li><a href="#insights">Insights</a></li>
           <li><a href="#approach">Our approach</a></li>
+          <li><a href="/schedule/">Schedule a call</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1497,6 +1506,8 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:insights@shadebreaker.com">insights@shadebreaker.com</a></li>
+          <li><a href="mailto:brandon@shadebreaker.com">brandon@shadebreaker.com</a></li>
+          <li><a href="/schedule/" data-savvycal-link="brandonharvath/discovery">Book a 30-minute call</a></li>
           <li><a href="https://www.linkedin.com/in/bharvath" rel="noopener" target="_blank">LinkedIn — /in/bharvath</a></li>
           <li><a href="mailto:insights@shadebreaker.com?subject=Subscribe%20to%20ShadeBreaker%20Insights&amp;body=Please%20add%20me%20to%20the%20Insights%20list.%0A%0AName%3A%0ARole%2Forganization%3A%0A%0AThanks.">Subscribe to Insights</a></li>
         </ul>

@@ -1,5 +1,12 @@
+# ============================================================
 # ShadeBreaker Insights — Netlify configuration
-# Static HTML site, no build step. Publish from repo root (Netlify default).
+# ============================================================
+# This file tells Netlify how to build, serve, and secure the site.
+# It lives at the root of the deployed folder. No build step is
+# required — the site is static HTML/CSS/JS/SVG.
+
+[build]
+  publish = "."
 
 # ------------------------------------------------------------
 # Security headers (applied to every response)
@@ -12,10 +19,12 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
+    # Content Security Policy: allow Google Fonts + SavvyCal (scheduler) + self.
+    # SavvyCal loads embed.js from embed.savvycal.com and the booking iframe from app.savvycal.com.
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https://*.savvycal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.savvycal.com; font-src 'self' https://fonts.gstatic.com https://*.savvycal.com; script-src 'self' 'unsafe-inline' https://embed.savvycal.com; connect-src 'self' https://*.savvycal.com; frame-src https://embed.savvycal.com https://app.savvycal.com https://savvycal.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
 
 # ------------------------------------------------------------
-# Long cache for immutable brand assets and SVG illustrations
+# Long cache for immutable brand assets
 # ------------------------------------------------------------
 [[headers]]
   for = "/brand/*"
@@ -23,7 +32,20 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.svg"
+  for = "*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-  
+
+# ------------------------------------------------------------
+# Redirects
+# ------------------------------------------------------------
+# Force HTTPS (Netlify does this by default once SSL provisions,
+# but this makes it explicit). The secondary domain redirect
+# (shadebreakerinsights.com -> shadebreaker.com) is configured
+# in Netlify's Domain Management UI, not here.
+
+[[redirects]]
+  from = "http://shadebreaker.com/*"
+  to = "https://shadebreaker.com/:splat"
+  status = 301
+  force = true
