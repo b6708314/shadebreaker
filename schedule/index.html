@@ -497,11 +497,7 @@
       </div>
       <!-- Inline SavvyCal embed. Uses brandonharvath/<slug>. -->
       <div class="meeting__embed">
-        <div
-          data-savvycal-embed-link="brandonharvath/discovery"
-          data-savvycal-embed-color="#D4A24C"
-          data-savvycal-embed-theme="light"
-        ></div>
+        <div id="embed-discovery"></div>
       </div>
     </article>
 
@@ -523,11 +519,7 @@
         </p>
       </div>
       <div class="meeting__embed">
-        <div
-          data-savvycal-embed-link="brandonharvath/ministry"
-          data-savvycal-embed-color="#D4A24C"
-          data-savvycal-embed-theme="light"
-        ></div>
+        <div id="embed-ministry"></div>
       </div>
     </article>
 
@@ -649,6 +641,21 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // SavvyCal inline embeds — inject calendars into the #embed-* divs.
+  // These calls queue until embed.js finishes loading, then render.
+  SavvyCal('inline', {
+    link: 'brandonharvath/discovery',
+    selector: '#embed-discovery',
+    theme: 'light',
+    color: '#D4A24C'
+  });
+  SavvyCal('inline', {
+    link: 'brandonharvath/ministry',
+    selector: '#embed-ministry',
+    theme: 'light',
+    color: '#D4A24C'
+  });
 </script>
 </body>
 </html>
