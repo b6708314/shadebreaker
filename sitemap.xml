@@ -1,227 +1,51 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Privacy policy for ShadeBreaker Insights — what we collect, what we don't, and how we handle the information you share." />
-<meta name="theme-color" content="#0B1F3A" />
-<meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://shadebreaker.com/privacy.html" />
-<title>Privacy — ShadeBreaker Insights</title>
-
-<link rel="icon" type="image/svg+xml" href="brand/favicon.svg" />
-<link rel="apple-touch-icon" href="brand/favicon.svg" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-<style>
-  :root {
-    --navy: #0B1F3A;
-    --navy-700: #132a4d;
-    --amber: #D4A24C;
-    --amber-dark: #A67726;
-    --cream: #F7F3EC;
-    --paper: #FFFFFF;
-    --ink: #1F2937;
-    --ink-soft: #4B5563;
-    --line: #E7E1D5;
-    --f-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
-    --f-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --radius: 14px;
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: var(--f-sans);
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 17px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(11,31,58,0.25); transition: color .2s ease, border-color .2s ease; }
-  a:hover { color: var(--amber-dark); border-bottom-color: var(--amber); }
-
-  header.site {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: saturate(150%) blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .nav__brand {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--f-serif); font-weight: 600; font-size: 22px;
-    color: var(--navy); border: none;
-  }
-  .nav__brand:hover { color: var(--navy-700); border: none; }
-  .brand__mark { width: 36px; height: 36px; display: inline-block; }
-  .brand__mark svg { width: 100%; height: 100%; display: block; }
-  .nav__back { font-size: 14px; font-weight: 500; color: var(--ink-soft); border: none; }
-  .nav__back:hover { color: var(--navy); border: none; }
-  .arrow { display: inline-block; transform: rotate(180deg); margin-right: 4px; }
-
-  main { padding: 72px 0 96px; }
-  .doc { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-  .eyebrow {
-    display: inline-block; font-size: 12px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--amber-dark); font-weight: 600;
-    margin-bottom: 16px;
-  }
-  h1 {
-    font-family: var(--f-serif); font-weight: 600; font-size: 44px;
-    line-height: 1.1; letter-spacing: -0.01em; color: var(--navy);
-    margin: 0 0 12px;
-  }
-  .updated { color: var(--ink-soft); font-size: 15px; margin: 0 0 40px; }
-  h2 {
-    font-family: var(--f-serif); font-weight: 600; font-size: 24px;
-    color: var(--navy); margin: 40px 0 12px;
-  }
-  p { margin: 0 0 16px; }
-  ul { padding-left: 22px; margin: 0 0 16px; }
-  li { margin-bottom: 6px; }
-
-  footer {
-    background: var(--navy); color: #C9D4E6;
-    padding: 32px 0; font-size: 14px;
-  }
-  footer .wrap {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 16px;
-  }
-  footer a { color: #C9D4E6; border-bottom-color: rgba(201,212,230,0.25); }
-  footer a:hover { color: var(--amber); border-bottom-color: var(--amber); }
-  .footer__brand {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--f-serif); font-weight: 600; font-size: 20px; color: #fff;
-    border: none;
-  }
-  .footer__brand:hover { color: #fff; border: none; }
-  .footer__brand .brand__mark { width: 28px; height: 28px; }
-
-  @media (max-width: 640px) {
-    h1 { font-size: 34px; }
-    main { padding: 48px 0 64px; }
-  }
-</style>
-</head>
-<body>
-
-<header class="site">
-  <div class="wrap">
-    <div class="nav">
-      <a href="index.html" class="nav__brand" aria-label="ShadeBreaker Insights — home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <clipPath id="priv-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
-              <radialGradient id="priv-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
-                <stop offset="0%"  stop-color="#F4D896"/>
-                <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
-                <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
-                <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
-                <stop offset="100%" stop-color="#07162B"/>
-              </radialGradient>
-              <radialGradient id="priv-sun" cx="50%" cy="100%" r="75%">
-                <stop offset="0%"  stop-color="#FFF4C8"/>
-                <stop offset="55%" stop-color="#F4D896"/>
-                <stop offset="100%" stop-color="#D4A24C"/>
-              </radialGradient>
-            </defs>
-            <rect x="2" y="2" width="60" height="60" rx="12" fill="#07162B"/>
-            <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#priv-sky)"/>
-            <g clip-path="url(#priv-clip)">
-              <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#priv-sun)"/>
-              <line x1="2" y1="44" x2="62" y2="44" stroke="#D4A24C" stroke-width="1"/>
-              <rect x="2" y="44" width="60" height="20" fill="#07162B"/>
-            </g>
-          </svg>
-        </span>
-        ShadeBreaker<span style="color: var(--amber);">.</span>
-      </a>
-      <a href="index.html" class="nav__back"><span class="arrow" aria-hidden="true">→</span> Back to site</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="doc">
-    <span class="eyebrow">Legal</span>
-    <h1>Privacy.</h1>
-    <p class="updated">Last updated: April 20, 2026.</p>
-
-    <p>ShadeBreaker Insights is a small consulting practice. This page describes, in plain language, what information we collect from visitors and clients, what we do with it, and what we don&rsquo;t.</p>
-
-    <h2>What this site collects</h2>
-    <p>This website is a static site. It does not set tracking cookies, run third-party ad pixels, or build an advertising profile of you. The only data actively collected from visitors is what you voluntarily share &mdash; primarily, messages you send us by email using the links on this site.</p>
-    <p>The site is served through a web host that, like all web hosts, keeps basic server logs (IP address, browser user-agent, request time, and pages requested). These logs are used for security, performance, and troubleshooting, and are retained only for as long as the host retains them by default.</p>
-    <p>Web fonts are served by Google Fonts. Google may log the IP address of the browser that requests the font. We do not receive or retain any of that information.</p>
-
-    <h2>What we do with information you send us</h2>
-    <p>When you email us, book an intro call, or sign up for Insights, we receive the contents of your message and your email address. We use that information to:</p>
-    <ul>
-      <li>Reply to you and, where relevant, schedule a conversation.</li>
-      <li>Deliver the Insights list if you subscribed.</li>
-      <li>Keep a basic record of engagements for client service and business administration.</li>
-    </ul>
-    <p>We do not sell, rent, or share your contact information with third parties for their marketing purposes.</p>
-
-    <h2>The Insights list</h2>
-    <p>If you subscribe to our Insights list, you can unsubscribe at any time by replying to any message asking to be removed, or by emailing <a href="mailto:insights@shadebreaker.com">insights@shadebreaker.com</a>. We&rsquo;ll remove your address promptly.</p>
-
-    <h2>Client confidentiality</h2>
-    <p>Information shared during consulting engagements &mdash; organizational data, strategy documents, board materials, personnel context &mdash; is treated as confidential and is not disclosed outside the engagement. Where an engagement calls for a formal NDA, we&rsquo;re glad to sign one.</p>
-
-    <h2>Children</h2>
-    <p>This site is not directed to children under 13, and we do not knowingly collect information from them.</p>
-
-    <h2>Changes</h2>
-    <p>If this policy changes materially, we&rsquo;ll update the &ldquo;Last updated&rdquo; date above. For substantive changes affecting people on the Insights list, we&rsquo;ll note the change in a mailing.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about this policy, or requests to access, correct, or delete information you&rsquo;ve shared with us: <a href="mailto:insights@shadebreaker.com">insights@shadebreaker.com</a>.</p>
-  </div>
-</main>
-
-<footer>
-  <div class="wrap">
-    <a href="index.html" class="footer__brand">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="ftr-priv-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
-            <radialGradient id="ftr-priv-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
-              <stop offset="0%"  stop-color="#F4D896"/>
-              <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
-              <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
-              <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
-              <stop offset="100%" stop-color="#07162B"/>
-            </radialGradient>
-            <radialGradient id="ftr-priv-sun" cx="50%" cy="100%" r="75%">
-              <stop offset="0%"  stop-color="#FFF4C8"/>
-              <stop offset="55%" stop-color="#F4D896"/>
-              <stop offset="100%" stop-color="#D4A24C"/>
-            </radialGradient>
-          </defs>
-          <rect x="2" y="2" width="60" height="60" rx="12" fill="#07162B"/>
-          <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#ftr-priv-sky)"/>
-          <g clip-path="url(#ftr-priv-clip)">
-            <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#ftr-priv-sun)"/>
-            <line x1="2" y1="44" x2="62" y2="44" stroke="#D4A24C" stroke-width="1"/>
-            <rect x="2" y="44" width="60" height="20" fill="#07162B"/>
-          </g>
-        </svg>
-      </span>
-      ShadeBreaker<span style="color: var(--amber);">.</span>
-    </a>
-    <span>&copy; 2026 ShadeBreaker Insights. All rights reserved.</span>
-  </div>
-</footer>
-
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://shadebreaker.com/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/schedule/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/insights/the-flourishing-trap.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/insights/the-quiet-drift.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/insights/the-scorecard-problem.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/insights/managing-beyond-the-scorecard.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/privacy.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://shadebreaker.com/terms.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
