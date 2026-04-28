@@ -3,30 +3,32 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Every scorecard is a discipleship document. The question is not whether yours is forming your team. The question is what it is forming them into. A constructive guide to designing measurement that survives the mission." />
+<meta name="description" content="A quiet word is reshaping the Church. When 'flourishing' becomes a KPI, something is lost. A founder's note from ShadeBreaker Insights — both warning and diagnostic." />
 <meta name="theme-color" content="#0B1F3A" />
-<link rel="canonical" href="https://shadebreaker.com/insights/the-scorecard-problem.html" />
-<title>The Scorecard Problem — ShadeBreaker Insights</title>
+<link rel="canonical" href="https://shadebreaker.com/insights/the-flourishing-trap.html" />
+<title>The Flourishing Trap — ShadeBreaker Insights</title>
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="ShadeBreaker Insights" />
-<meta property="og:title" content="The Scorecard Problem" />
-<meta property="og:description" content="Every scorecard is a discipleship document. What yours is teaching your team to become." />
-<meta property="og:url" content="https://shadebreaker.com/insights/the-scorecard-problem.html" />
+<meta property="og:title" content="The Flourishing Trap" />
+<meta property="og:description" content="A quiet word is reshaping the Church. When 'flourishing' becomes a KPI, something is lost. A founder's note — both warning and diagnostic." />
+<meta property="og:url" content="https://shadebreaker.com/insights/the-flourishing-trap.html" />
 <meta property="og:image" content="https://shadebreaker.com/brand/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="article:author" content="Brandon Harvath" />
-<meta property="article:section" content="Measurement &amp; Mission" />
+<meta property="article:section" content="Ministry &amp; Strategy" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Scorecard Problem — ShadeBreaker Insights" />
-<meta name="twitter:description" content="Every scorecard is a discipleship document. What yours is teaching your team to become." />
+<meta name="twitter:title" content="The Flourishing Trap — ShadeBreaker Insights" />
+<meta name="twitter:description" content="When 'flourishing' becomes a KPI, something is lost. A founder's note." />
 <meta name="twitter:image" content="https://shadebreaker.com/brand/og-image.jpg" />
 
+<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="../brand/favicon.svg" />
 <link rel="apple-touch-icon" href="../brand/favicon.svg" />
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -51,12 +53,18 @@
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0; font-family: var(--f-sans); background: var(--paper); color: var(--ink);
-    font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+    margin: 0;
+    font-family: var(--f-sans);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
   a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(11,31,58,0.25); transition: color .2s ease, border-color .2s ease; }
   a:hover { color: var(--amber-dark); border-bottom-color: var(--amber); }
 
+  /* ---------- Header / nav ---------- */
   header.site {
     position: sticky; top: 0; z-index: 10;
     background: rgba(255,255,255,0.92);
@@ -64,104 +72,313 @@
     border-bottom: 1px solid var(--line);
   }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .nav__brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-serif); font-size: 20px; font-weight: 600; color: var(--navy); border: none; letter-spacing: -0.2px; }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav__brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--f-serif); font-size: 20px; font-weight: 600;
+    color: var(--navy); border: none;
+    letter-spacing: -0.2px;
+  }
   .nav__brand:hover { color: var(--navy); border: none; }
-  .brand__mark { width: 32px; height: 32px; flex: none; display: inline-flex; align-items: center; justify-content: center; }
+  .brand__mark {
+    width: 32px; height: 32px; flex: none;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
   .brand__mark svg { width: 100%; height: 100%; display: block; }
-  .nav__back { font-family: var(--f-sans); font-size: 14px; font-weight: 500; color: var(--ink-soft); border: none; }
+  .nav__back {
+    font-family: var(--f-sans); font-size: 14px; font-weight: 500;
+    color: var(--ink-soft); border: none;
+  }
   .nav__back:hover { color: var(--amber-dark); border: none; }
   .nav__back .arrow { display: inline-block; transform: rotate(180deg); margin-right: 6px; }
 
-  article { max-width: 720px; margin: 0 auto; padding: 56px 24px 40px; }
+  /* ---------- Article ---------- */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+  }
   .eyebrow {
     display: inline-flex; align-items: center;
     font-family: var(--f-sans); font-size: 12.5px; font-weight: 600;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-400); margin-bottom: 18px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--navy-400); margin-bottom: 18px;
   }
-  .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--amber); margin-right: 12px; }
-  article h1 { font-family: var(--f-serif); font-size: clamp(36px, 5.4vw, 58px); line-height: 1.06; letter-spacing: -1px; color: var(--navy); font-weight: 600; margin: 0 0 20px; }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 2px;
+    background: var(--amber); margin-right: 12px;
+  }
+  article h1 {
+    font-family: var(--f-serif);
+    font-size: clamp(36px, 5.4vw, 58px);
+    line-height: 1.06;
+    letter-spacing: -1px;
+    color: var(--navy);
+    font-weight: 600;
+    margin: 0 0 20px;
+  }
   article h1 em { font-style: italic; color: var(--amber-dark); }
-  .dek { font-family: var(--f-serif); font-style: italic; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: var(--ink-soft); max-width: 58ch; margin: 0 0 28px; }
-  .byline { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); margin-bottom: 44px; }
-  .byline .author { display: inline-flex; align-items: center; gap: 10px; color: var(--navy); font-weight: 600; }
-  .byline .avatar { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; background: var(--cream); }
+  .dek {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin: 0 0 28px;
+  }
+  .byline {
+    display: flex; flex-wrap: wrap; gap: 14px 22px;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-size: 14px; color: var(--ink-soft);
+    margin-bottom: 44px;
+  }
+  .byline .author {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--navy); font-weight: 600;
+  }
+  .byline .avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    overflow: hidden; background: var(--cream);
+  }
   .byline .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
   .byline time, .byline .read { font-weight: 500; }
   .byline .dot { color: var(--line); }
 
-  .body p { font-family: var(--f-serif); font-size: 19px; line-height: 1.68; color: var(--ink); margin: 0 0 22px; }
-  .body p:first-of-type::first-letter { font-family: var(--f-serif); font-size: 62px; line-height: 0.9; font-weight: 600; float: left; margin: 6px 10px -2px 0; color: var(--navy); }
-  .body h2 { font-family: var(--f-serif); font-size: 28px; line-height: 1.2; letter-spacing: -0.4px; color: var(--navy); margin: 44px 0 18px; font-weight: 600; }
-  .body h3 { font-family: var(--f-serif); font-size: 22px; line-height: 1.25; color: var(--navy); margin: 28px 0 12px; font-weight: 600; }
+  /* Article body */
+  .body p {
+    font-family: var(--f-serif);
+    font-size: 19px;
+    line-height: 1.68;
+    color: var(--ink);
+    margin: 0 0 22px;
+  }
+  .body p:first-of-type::first-letter {
+    font-family: var(--f-serif);
+    font-size: 62px;
+    line-height: 0.9;
+    font-weight: 600;
+    float: left;
+    margin: 6px 10px -2px 0;
+    color: var(--navy);
+  }
+  .body h2 {
+    font-family: var(--f-serif);
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: var(--navy);
+    margin: 44px 0 18px;
+    font-weight: 600;
+  }
   .body em { font-style: italic; color: var(--navy); }
   .body strong { color: var(--navy); font-weight: 600; }
-  .body cite { font-style: italic; color: var(--navy-400); font-size: 0.95em; }
-
-  .scripture { margin: 8px 0 22px; padding: 4px 0 4px 20px; border-left: 2px solid var(--amber); color: var(--navy); font-family: var(--f-serif); font-style: italic; font-size: 18px; }
-  .scripture cite { display: block; margin-top: 4px; font-family: var(--f-sans); font-style: normal; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-400); }
-
-  .pullquote { margin: 40px 0; padding: 32px 30px; background: linear-gradient(135deg, rgba(212,162,76,0.10), rgba(212,162,76,0.00) 75%), var(--cream); border-left: 3px solid var(--amber); border-radius: 0 14px 14px 0; }
-  .pullquote p { font-family: var(--f-serif); font-style: italic; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.35; color: var(--navy); margin: 0; font-weight: 500; }
-
-  /* Three properties cards */
-  .properties { display: grid; gap: 18px; margin: 8px 0 22px; }
-  .property {
-    background: var(--cream); border: 1px solid var(--line); border-left: 3px solid var(--amber);
-    border-radius: 0 12px 12px 0; padding: 22px 26px;
+  .body cite {
+    font-style: italic; color: var(--navy-400);
+    font-size: 0.95em;
   }
-  .property h3 {
-    font-family: var(--f-serif); font-style: italic; color: var(--navy);
-    font-size: 21px; line-height: 1.3; margin: 0 0 10px; font-weight: 500;
-  }
-  .property h3 strong { color: var(--amber-dark); font-style: normal; font-weight: 700; font-family: var(--f-sans); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
-  .property p { font-family: var(--f-serif); font-size: 17px; line-height: 1.6; color: var(--ink); margin: 0; }
 
-  /* Sector pass — three columns of practical guidance */
-  .sectors { display: grid; gap: 18px; margin: 8px 0 22px; }
-  .sector {
-    background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
-    padding: 22px 24px;
+  /* Scripture blockquote (small, inline-ish) */
+  .scripture {
+    margin: 8px 0 22px;
+    padding: 4px 0 4px 20px;
+    border-left: 2px solid var(--amber);
+    color: var(--navy);
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 18px;
   }
-  .sector h3 {
-    font-family: var(--f-sans); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--amber-dark); margin: 0 0 10px; font-weight: 700;
+  .scripture cite {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--f-sans);
+    font-style: normal;
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy-400);
   }
-  .sector p { font-family: var(--f-serif); font-size: 17px; line-height: 1.6; color: var(--ink); margin: 0; }
 
-  .diagnostic { margin: 48px 0 32px; padding: 36px 32px; background: var(--navy); color: #E6ECF5; border-radius: var(--radius); position: relative; overflow: hidden; }
-  .diagnostic::before { content: ""; position: absolute; top: -40%; right: -20%; width: 60%; height: 120%; background: radial-gradient(circle at 30% 70%, rgba(212,162,76,0.25), transparent 70%); pointer-events: none; }
+  /* Pull-quote */
+  .pullquote {
+    margin: 40px 0;
+    padding: 32px 30px;
+    background:
+      linear-gradient(135deg, rgba(212,162,76,0.10), rgba(212,162,76,0.00) 75%),
+      var(--cream);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 14px 14px 0;
+  }
+  .pullquote p {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.35;
+    color: var(--navy);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  /* Diagnostic box */
+  .diagnostic {
+    margin: 48px 0 32px;
+    padding: 36px 32px;
+    background: var(--navy);
+    color: #E6ECF5;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+  .diagnostic::before {
+    content: "";
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 60%; height: 120%;
+    background: radial-gradient(circle at 30% 70%, rgba(212,162,76,0.25), transparent 70%);
+    pointer-events: none;
+  }
   .diagnostic .eyebrow { color: var(--amber-light); margin-bottom: 10px; position: relative; }
   .diagnostic .eyebrow::before { background: var(--amber); }
-  .diagnostic h3 { font-family: var(--f-serif); font-size: 26px; line-height: 1.25; color: #fff; margin: 0 0 20px; font-weight: 600; position: relative; }
-  .diagnostic ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; counter-reset: q; position: relative; }
-  .diagnostic li { counter-increment: q; padding: 18px 20px 18px 56px; background: rgba(255,255,255,0.04); border: 1px solid rgba(212,162,76,0.20); border-radius: 10px; position: relative; font-family: var(--f-serif); font-size: 17px; line-height: 1.55; color: #D9E2F0; }
-  .diagnostic li::before { content: counter(q); position: absolute; left: 18px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--amber); color: var(--navy); font-family: var(--f-sans); font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; }
+  .diagnostic h3 {
+    font-family: var(--f-serif);
+    font-size: 26px;
+    line-height: 1.25;
+    color: #fff;
+    margin: 0 0 20px;
+    font-weight: 600;
+    position: relative;
+  }
+  .diagnostic ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 18px;
+    counter-reset: q;
+    position: relative;
+  }
+  .diagnostic li {
+    counter-increment: q;
+    padding: 18px 20px 18px 56px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,162,76,0.20);
+    border-radius: 10px;
+    position: relative;
+    font-family: var(--f-serif);
+    font-size: 17px;
+    line-height: 1.55;
+    color: #D9E2F0;
+  }
+  .diagnostic li::before {
+    content: counter(q);
+    position: absolute;
+    left: 18px; top: 14px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--amber);
+    color: var(--navy);
+    font-family: var(--f-sans);
+    font-weight: 700;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
   .diagnostic li strong { color: var(--amber-light); font-weight: 600; }
 
-  .signoff { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-family: var(--f-serif); font-style: italic; font-size: 17px; color: var(--navy); }
+  /* Signoff */
+  .signoff {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--navy);
+  }
 
-  .endcta { margin: 48px 0 8px; padding: 36px 32px; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); text-align: left; }
-  .endcta h3 { font-family: var(--f-serif); font-size: 24px; line-height: 1.25; color: var(--navy); margin: 0 0 10px; font-weight: 600; }
-  .endcta p { font-size: 16px; color: var(--ink-soft); margin: 0 0 20px; line-height: 1.55; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font-family: var(--f-sans); font-weight: 600; font-size: 14.5px; border-radius: 999px; text-decoration: none; border: 1px solid transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+  /* End-of-article CTA */
+  .endcta {
+    margin: 48px 0 8px;
+    padding: 36px 32px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-align: left;
+  }
+  .endcta h3 {
+    font-family: var(--f-serif);
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+  .endcta p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+    line-height: 1.55;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px;
+    font-family: var(--f-sans);
+    font-weight: 600;
+    font-size: 14.5px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
   .btn--primary { background: var(--navy); color: #fff; }
   .btn--primary:hover { background: var(--navy-700); transform: translateY(-1px); border: 1px solid transparent; color: #fff; }
   .btn .arrow { transition: transform .2s ease; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  .series { margin: 28px 0 0; padding: 22px 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
-  .series h4 { font-family: var(--f-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-400); margin: 0 0 12px; font-weight: 600; }
+  /* Series link block */
+  .series {
+    margin: 28px 0 0;
+    padding: 22px 24px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .series h4 {
+    font-family: var(--f-sans); font-size: 12px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--navy-400); margin: 0 0 12px; font-weight: 600;
+  }
   .series ol { margin: 0; padding-left: 20px; font-family: var(--f-serif); font-size: 16px; color: var(--ink); }
   .series li { margin-bottom: 6px; }
   .series li.current { color: var(--amber-dark); font-weight: 600; }
   .series li.current::after { content: " — you are here"; font-family: var(--f-sans); font-size: 12px; font-style: normal; font-weight: 500; color: var(--ink-soft); letter-spacing: 0.04em; }
 
-  footer { background: #07162B; color: #9AA9C0; padding: 48px 0 28px; font-size: 14px; margin-top: 72px; }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; }
+  /* Footer */
+  footer {
+    background: #07162B;
+    color: #9AA9C0;
+    padding: 48px 0 28px;
+    font-size: 14px;
+    margin-top: 72px;
+  }
+  footer .wrap {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    justify-content: space-between; align-items: center;
+  }
   footer a { color: #C9D4E6; border-bottom-color: rgba(201,212,230,0.25); }
   footer a:hover { color: var(--amber); border-bottom-color: var(--amber); }
-  .footer__brand { color: #fff; font-family: var(--f-serif); font-size: 18px; display: inline-flex; align-items: center; gap: 10px; border: none; }
+  .footer__brand {
+    color: #fff; font-family: var(--f-serif); font-size: 18px;
+    display: inline-flex; align-items: center; gap: 10px;
+    border: none;
+  }
   .footer__brand:hover { color: #fff; border: none; }
   .footer__brand .brand__mark { width: 28px; height: 28px; }
 
@@ -172,7 +389,6 @@
     .diagnostic { padding: 28px 22px; }
     .diagnostic li { padding: 16px 16px 16px 52px; font-size: 16px; }
     .endcta { padding: 28px 22px; }
-    .property, .sector { padding: 18px 20px; }
     .byline { gap: 10px 14px; }
   }
 
@@ -181,9 +397,57 @@
     html { scroll-behavior: auto; }
   }
 </style>
+<!-- JSON-LD structured data: Article (faith-based / church / nonprofit consulting) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Flourishing Trap: how a borrowed word is reshaping the Church",
+  "alternativeHeadline": "When 'flourishing' becomes a KPI in church and nonprofit ministry",
+  "description": "A quiet word is reshaping the Church. When 'flourishing' becomes a KPI, something is lost. A founder's note from ShadeBreaker Insights — both warning and diagnostic for church leaders, ministry executives, and faith-based nonprofit boards.",
+  "image": "https://shadebreaker.com/brand/og-image.jpg",
+  "datePublished": "2026-04-20",
+  "dateModified": "2026-04-20",
+  "author": {
+    "@type": "Person",
+    "@id": "https://shadebreaker.com/#brandon",
+    "name": "Brandon Harvath",
+    "url": "https://shadebreaker.com/",
+    "jobTitle": "Faith-based nonprofit and church consultant"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://shadebreaker.com/#organization",
+    "name": "ShadeBreaker Insights",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://shadebreaker.com/brand/og-image.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://shadebreaker.com/insights/the-flourishing-trap.html"
+  },
+  "articleSection": "Church Leadership & Ministry Strategy",
+  "inLanguage": "en-US",
+  "keywords": "church consulting, faith-based nonprofit consulting, ministry strategy, church leadership, para-church consulting, christian leadership, ministry KPI, church measurement, kingdom flourishing",
+  "about": [
+    { "@type": "Thing", "name": "Church leadership" },
+    { "@type": "Thing", "name": "Faith-based nonprofit strategy" },
+    { "@type": "Thing", "name": "Ministry measurement" },
+    { "@type": "Thing", "name": "Christian organizational leadership" }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Church leaders, senior pastors, faith-based nonprofit executives, para-church ministry boards"
+  }
+}
+</script>
+
 </head>
 <body>
 
+<!-- ============== HEADER ============== -->
 <header class="site">
   <div class="wrap">
     <div class="nav">
@@ -191,24 +455,24 @@
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <clipPath id="score-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
-              <radialGradient id="score-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
+              <clipPath id="art-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
+              <radialGradient id="art-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
                 <stop offset="0%"  stop-color="#F4D896"/>
                 <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
                 <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
                 <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
                 <stop offset="100%" stop-color="#07162B"/>
               </radialGradient>
-              <radialGradient id="score-sun" cx="50%" cy="100%" r="75%">
+              <radialGradient id="art-sun" cx="50%" cy="100%" r="75%">
                 <stop offset="0%"  stop-color="#FFF4C8"/>
                 <stop offset="55%" stop-color="#F4D896"/>
                 <stop offset="100%" stop-color="#D4A24C"/>
               </radialGradient>
             </defs>
             <rect x="2" y="2" width="60" height="60" rx="12" fill="#07162B"/>
-            <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#score-sky)"/>
-            <g clip-path="url(#score-clip)">
-              <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#score-sun)"/>
+            <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#art-sky)"/>
+            <g clip-path="url(#art-clip)">
+              <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#art-sun)"/>
               <line x1="2" y1="44" x2="62" y2="44" stroke="#D4A24C" stroke-width="1"/>
               <rect x="2" y="44" width="60" height="20" fill="#07162B"/>
             </g>
@@ -217,19 +481,20 @@
         ShadeBreaker<span style="color: var(--amber);">.</span>
       </a>
       <a href="../index.html#insights" class="nav__back">
-        <span class="arrow" aria-hidden="true">&rarr;</span> All insights
+        <span class="arrow" aria-hidden="true">→</span> All insights
       </a>
     </div>
   </div>
 </header>
 
+<!-- ============== ARTICLE ============== -->
 <main>
 <article>
-  <span class="eyebrow">Essay 3 of 4 — Measurement &amp; Mission</span>
-  <h1>The <em>Scorecard</em> Problem.</h1>
+  <span class="eyebrow">Essay — Ministry &amp; Strategy</span>
+  <h1>The <em>Flourishing</em> Trap.</h1>
   <p class="dek">
-    Every scorecard is a discipleship document. The question is not whether yours is forming your
-    team. The question is what it is forming them into.
+    A quiet word is reshaping the Church. As an executive leader, a consultant to ministries and as a Christian
+    who has run them, I owe you both a warning and a diagnostic.
   </p>
 
   <div class="byline">
@@ -237,258 +502,275 @@
       <span class="avatar"><img src="../brand/founder-portrait.jpg" alt="" /></span>
       Brandon Harvath
     </span>
-    <span class="dot" aria-hidden="true">&middot;</span>
-    <time datetime="2026-04-21">April 2026</time>
-    <span class="dot" aria-hidden="true">&middot;</span>
-    <span class="read">10 min read</span>
+    <span class="dot" aria-hidden="true">·</span>
+    <time datetime="2026-04-20">April 2026</time>
+    <span class="dot" aria-hidden="true">·</span>
+    <span class="read">8 min read</span>
   </div>
 
   <div class="body">
 
     <p>
-      If the first essay in this series named the borrowed word that has been quietly reshaping the
-      Church &mdash; <a href="the-flourishing-trap.html"><em>flourishing</em></a> &mdash; and the
-      second named the mechanism by which a misaligned aim
-      <a href="the-quiet-drift.html">drifts</a> an organization away from its mission, this one is
-      about the single most powerful instrument of either drift or recovery you have at your
-      disposal: the scorecard.
+      There is a word moving quietly through the universities, Silicon Valley, the venture community,
+      research organizations and &mdash; most urgently &mdash; through the Church. It shares the
+      vocabulary of Scripture. It borrows the cadence of psalm and sermon. It speaks of joy, meaning,
+      purpose, even of Christ. And it is already reshaping how pastors plan, how boards measure, and
+      how believers imagine what God is for. The word is <em>flourishing</em>.
     </p>
 
     <p>
-      It is also the instrument leaders are most likely to underestimate. Strategy gets the
-      boardroom. Structure gets the consultants. The scorecard, in most organizations, gets a
-      spreadsheet, a quarterly review, and very little serious theological or strategic attention.
-      That is a mistake of historic proportions, and it is the reason this essay exists.
+      I write this with two things in view. I currently serve as the Chief Administrative Officer
+      (which I translate as &ldquo;executive pastor&rdquo;) of one of the world&rsquo;s largest
+      missions organizations, and love to consult and support churches, ministries, and enterprises on
+      strategy and operations. I have spent three decades running large, complex systems &mdash; from
+      Fortune 500 operations to global ministries. So, I write both as someone who takes this drift
+      with great seriousness and as someone uncomfortably aware that I am exactly the sort of person
+      the Church has been trained to listen to when it starts thinking about dashboards and outcomes.
+      Take what follows with that tension in mind.
     </p>
 
     <p>
-      Because here is the part of the line attributed to Peter Drucker &mdash; which Drucker
-      probably never said, though it sounds enough like him that the attribution has stuck &mdash;
-      that very few leaders sit with long enough: <em>what gets measured gets managed</em> is true,
-      but it is only half the truth. The British economist Charles Goodhart, writing in the 1970s,
-      named the second half more precisely: <em>when a measure becomes a target, it ceases to be a
-      good measure.</em> Both lines describe the same gravitational pull. And both stop short of the
-      third truth, which is the one Scripture insists on: <strong>what gets measured long enough
-      eventually gets worshipped.</strong> Whatever the organization counts, the organization slowly
-      becomes. The dashboard is not just a reporting instrument. It is a forming instrument. It is,
-      in the truest sense of the word, a <em>discipleship document</em>. It teaches the team what to
-      chase, what to celebrate, and over time, what to be.
+      The instinct behind the desire to flourish is not wrong. It is deeply human, and at the root it
+      is God-given. No one wakes up hoping to wither. We were made for joy. The question is not
+      whether we long for fullness of life. The question is: from what source are we getting this
+      vision of &ldquo;fullness&rdquo;?
+    </p>
+
+    <h2>The question beneath the question</h2>
+
+    <p>
+      Because <em>flourishing</em> is no longer merely being used. It is being <strong>defined,
+      measured, systematized, and, in some cases, sold back to the Church.</strong> Some of the
+      platforms promise dashboards for congregational health. Research institutions are issuing
+      different indices of pastoral &ldquo;wellbeing&rdquo;. Venture-backed organizations are giving
+      us frameworks and cohorts. Consulting firms keep proposing metrics. Listen closely to the
+      vocabulary, and the tone stops sounding like Scripture and starts sounding like something else:
+      <em>key performance indicators. User engagement. Behavioral outcomes. Scalable impact.</em> At
+      times it feels as though the Church is being gently invited to become a corporation, or perhaps
+      a startup.
     </p>
 
     <p>
-      So the question for any serious leader is not whether the scorecard is forming the team. It is.
-      The question is what it is forming them into.
-    </p>
-
-    <h2>Where most scorecards actually come from</h2>
-
-    <p>
-      Most organizational scorecards are not designed. They are inherited.
-    </p>
-
-    <p>
-      They are inherited from the consulting firm whose previous engagement was a SaaS company. They
-      are inherited from the executive who joined two years ago and brought their last
-      company&rsquo;s KPI deck with them. They are inherited from the board chair who serves on three
-      other boards and is fluent in the language of those organizations. They are inherited from the
-      funder, the investor, or the denomination whose reporting requirements quietly become the
-      operating system, regardless of intent.
+      The most prominent intellectual home of this movement is Tyler VanderWeele&rsquo;s Human
+      Flourishing Program at Harvard. VanderWeele is a careful and respected scholar, and his
+      measurement framework &mdash; happiness and life satisfaction, mental and physical health,
+      meaning and purpose, character and virtue, close social relationships, financial and material
+      stability &mdash; has become the de facto template by which Western institutions, including
+      parts of the Church, now describe a life going well. It is rooted in the older eudaimonist
+      tradition that runs from Aristotle through to modern positive psychology, and it is rigorous
+      work. The framework is also, by its own design, religiously neutral. That is exactly the
+      trouble I am writing about. Because the God of the Bible cannot be &ldquo;religiously
+      neutral&rdquo; about the chief end of His creatures. Either everything in our lives is ordered
+      toward His glory, or our flourishing is something other than the flourishing Scripture
+      describes. There is no third option.
     </p>
 
     <p>
-      This is not a moral failing. It is the natural physics of organizational life. A scorecard,
-      like any tool, follows the path of least resistance. The marketplace has spent forty years
-      polishing its scorecards. The mission, by contrast, has rarely been forced to articulate what
-      it actually counts. So when the moment comes &mdash; and it always comes &mdash; and the leader
-      needs a scorecard for the all-hands meeting on Monday morning, the marketplace&rsquo;s
-      scorecard is the one within reach. It gets borrowed. Then it gets institutionalized. Then it
-      becomes the organization.
+      Here is the dangerous part: not everything in this movement is wrong. Much of it is right.
+      Serious researchers ask serious questions. Faithful people can and do build faithful tools.
+      Data, when it&rsquo;s properly used, can serve our sanctification. So I&rsquo;d be careful not
+      to argue that this is a simple matter of willful ignorance.
     </p>
 
     <p>
-      The Church, in my experience, is the worst offender &mdash; and not for the reason most critics
-      name. It is not that ministries are using metrics. They are. The problem is that they are
-      using the <em>wrong</em> metrics, borrowed from corporate America somewhere around 1995, with a
-      few spiritual labels applied on top to make them feel native. <em>Discipleship pipeline. Member
-      engagement funnel. First-time guest conversion rate.</em> These are not, in most cases,
-      theologically considered. They are the marketing analytics of a 1990s software company with the
-      words swapped out. Whatever the dashboard is teaching your church to be, it is unlikely to be
-      what Scripture had in mind.
-    </p>
-
-    <h2>The three properties of a faithful scorecard</h2>
-
-    <p>
-      A scorecard worthy of the mission has three properties. They are easy to name and difficult to
-      build, which is why they are so rare.
-    </p>
-
-    <div class="properties">
-      <div class="property">
-        <h3><strong>Property One — Measure</strong>It measures what the mission actually requires &mdash; even when those things are hard to count.</h3>
-        <p>
-          Most scorecards measure what is easy to count, and then quietly redefine the mission to
-          match. The faithful scorecard does the opposite. It begins from what the mission requires
-          and then does the harder work of finding ways &mdash; proxy measures, qualitative reviews,
-          narrative reporting, longitudinal observation &mdash; to track those things even when they
-          resist neat quantification. Sanctification is hard to count. Character formation is hard to
-          count. The depth of a marriage saved by a church&rsquo;s counseling ministry is hard to
-          count. None of those things may be ignored simply because they refuse to fit a cell in a
-          spreadsheet.
-        </p>
-      </div>
-      <div class="property">
-        <h3><strong>Property Two — Protect</strong>It protects what the mission cannot afford to lose.</h3>
-        <p>
-          A faithful scorecard always carries a small number of <em>guardrail</em> measures whose
-          only job is to flash red the moment the organization is succeeding at the wrong things. If
-          your church is growing in attendance but losing depth, the scorecard should know. If your
-          nonprofit is raising more money but burning out staff, the scorecard should know. If your
-          business is growing in revenue but degrading product quality or customer trust, the
-          scorecard should know. Guardrails are not nice-to-haves. They are the difference between a
-          scorecard that serves the mission and a scorecard that is slowly destroying it.
-        </p>
-      </div>
-      <div class="property">
-        <h3><strong>Property Three — Refuse</strong>It refuses what looks like growth but isn&rsquo;t.</h3>
-        <p>
-          Vanity metrics are the comfort food of organizational life. They taste like progress and
-          provide nothing. <em>Followers. Impressions. Page views. Capacity numbers without
-          engagement. Headcount without effectiveness. Revenue without margin. Donor count without
-          retention.</em> A faithful scorecard is brutal about this. It refuses to count what looks
-          like motion but is not movement. It is willing to report a smaller, harder-won number
-          rather than a larger, hollow one. This is the property leaders find hardest to hold,
-          because vanity metrics are how you make the board meeting comfortable.
-        </p>
-      </div>
-    </div>
-
-    <div class="pullquote">
-      <p>&ldquo;Every scorecard is a discipleship document. It teaches your team what to
-      become.&rdquo;</p>
-    </div>
-
-    <h2>What each kind of organization actually ought to count</h2>
-
-    <p>
-      The properties above are universal. The application is sectoral. Below, in compressed form, is
-      what I have found to be true after thirty years across very different kinds of institutions.
-    </p>
-
-    <div class="sectors">
-      <div class="sector">
-        <h3>For the Church</h3>
-        <p>
-          A church should count fewer things than it currently does, and the things it counts should
-          hurt to count. Faithfulness over time. The depth of disciples produced, not the breadth of
-          attendees gathered. The witness of members in their workplaces, not the volume of
-          programming on the campus. Marriages held together. Children formed in faith. The number
-          of people sent into vocations of mission, not the number who stayed to fill seats. These
-          are uncomfortable to measure. They are also the only measures that survive a generational
-          handoff.
-        </p>
-      </div>
-      <div class="sector">
-        <h3>For the Nonprofit / Mission Organization</h3>
-        <p>
-          A nonprofit should count outcomes, not outputs &mdash; and it should be honest about the
-          difference. <em>We trained 1,200 leaders this year</em> is an output. <em>Of the leaders
-          we trained five years ago, this is the proportion still in faithful service in the field,
-          and this is the measurable change in the communities they serve</em> is an outcome.
-          Outputs are easy. Outcomes are slow, expensive, and frequently humbling. A nonprofit that
-          refuses to count outcomes is, often without knowing it, a fundraising operation with a
-          program attached.
-        </p>
-      </div>
-      <div class="sector">
-        <h3>For the Business</h3>
-        <p>
-          A business should count what the founder swore the business would never become. If the
-          founder built the company on craftsmanship, the scorecard should track quality &mdash; not
-          just margin. If the founder built it on customer trust, the scorecard should track
-          retention and net promoter &mdash; not just acquisition. If the founder built it on a
-          culture of excellence, the scorecard should track the rate at which excellent people stay,
-          not the rate at which any people are added. The most useful business scorecard is the one
-          whose first metric would have made the founder proud.
-        </p>
-      </div>
-    </div>
-
-    <p>
-      The meta-point, across all three: <strong>the most important thing every scorecard must measure
-      is the integrity between what the organization counts and what the organization says it is
-      for.</strong> That gap, more than any other single number, predicts whether the organization
-      will still be the organization it was built to be ten years from now.
-    </p>
-
-    <h2>The most important question a leader asks each January</h2>
-
-    <p>
-      Most leaders, in the first week of January (or whenever you do your planning), sit with their team and ask the version of the
-      question they have been trained to ask: <em>What is our number for this year?</em> It is a
-      reasonable question. It is also the wrong first question.
-    </p>
-
-    <p>
-      The right first question is older, harder, and considerably more revealing. It is this:
-      <strong>Is our scorecard forming us into the kind of organization we said we wanted to
-      build?</strong>
-    </p>
-
-    <p>
-      If the answer is yes, set the number with confidence. If the answer is no, set the number
-      anyway &mdash; because budgets must be made and someone has to lead &mdash; but understand that
-      you have just announced a target that will continue to form your team into something other than
-      what you said you were trying to build. That is, to use the language of the previous essay, a
-      year of further drift, by design.
-    </p>
-
-    <p>
-      The leaders I respect most are the ones who hold that question with the seriousness it
-      deserves. They redesign the scorecard before they set the target. It is rarer than it should
-      be. It is also the single discipline that most consistently separates organizations that
-      survive their second decade from those that don&rsquo;t.
+      The danger is subtler than that, because history has told us that the most destructive errors in
+      the Church are rarely the ones that appear blatantly false. They are the ones that sound
+      <em>almost</em> right. The serpent&rsquo;s tact did not begin with denial; he began with
+      distortion:
     </p>
 
     <blockquote class="scripture">
-      Show me, O Lord, my life&rsquo;s end and the number of my days; let me know how fleeting is my
-      life.
-      <cite>Psalm 39:4</cite>
+      Did God actually say&hellip;?
+      <cite>Genesis 3:1</cite>
     </blockquote>
 
     <p>
-      Even the psalmist asks to be measured by the right thing. The leader who has not asked God
-      what to count is a leader who has, by default, accepted the marketplace&rsquo;s answer.
+      Questions like this, gently posed, can instantly reshape us. So we must ask, plainly: what do we
+      mean when we say <em>flourishing</em>? Who gets to define it? And what happens if we get it
+      wrong?
     </p>
 
-    <div class="diagnostic" aria-labelledby="score-diag-title">
+    <h2>The architecture of reality</h2>
+
+    <p>
+      So I&rsquo;m compelled to start with God&rsquo;s Word, and the Bible does not begin with man
+      &mdash; his needs, his desires, or his potential. It begins with God. <em>In the beginning, God
+      created the heavens and the earth &mdash; Genesis 1:1.</em> Everything that follows is
+      downstream of that sentence. Paul, through the inspiration of the Holy Spirit, gives us a vivid
+      and yet simple picture of the architecture behind it:
+    </p>
+
+    <blockquote class="scripture">
+      For from him and through him and to him are all things. To him be glory forever. Amen.
+      <cite>Romans 11:36</cite>
+    </blockquote>
+
+    <p>
+      <em>From</em> Him. <em>Through</em> Him. <em>To</em> Him. That is how reality is constructed
+      &mdash; not as a faux scaffolding for our self-realization, self-esteem or self-satisfaction,
+      but as a structure ordered toward His glory. Which means this: if <em>flourishing</em> is
+      defined in any way that does not terminate on the glory of God, then we must conclude that it is
+      not <em>biblical</em> flourishing. It is something else. It may look vibrant. It may produce
+      metrics. It may sound like faith. But it will be quietly drifting from the only source that can
+      sustain it.
+    </p>
+
+    <p>
+      The biblical word for the wholeness this construction makes possible is <em>shalom</em>.
+      Cornelius Plantinga, in <em>Not the Way It&rsquo;s Supposed to Be</em>, defines it as &ldquo;the
+      webbing together of God, humans, and all creation in justice, fulfillment, and delight.&rdquo;
+      That is the right word. It is not a wellness score. It is not an index. It is rest in God, with
+      God, under God, ordered to God. Apart from Him, every borrowed word for it &mdash;
+      <em>flourishing</em> included &mdash; bends quietly toward the self, and what bends toward the
+      self always eventually breaks under the weight of being asked to bear what only God can bear.
+      Worse yet, and even more simply, it will break under the very first commandment &mdash;
+      &ldquo;you shall have no other gods before me.&rdquo; (Exodus 20:3 ESV).
+    </p>
+
+    <p>
+      And here is the paradox at the center of the Christian life: when we aim at God rather than at
+      flourishing, joy does not shrink. It becomes full! <em>In your presence there is fullness of
+      joy; at your right hand are pleasures forevermore</em> (Psalm 16:11). Full. Not partial. Not
+      fragile. True flourishing is not found by aiming at it. It is found by aiming at Him. The
+      &ldquo;rest&rdquo; we are built to long for is rest <em>in</em> Him, not the rest we keep trying
+      to manufacture <em>away</em> from Him.
+    </p>
+
+    <h2>The great exchange</h2>
+
+    <p>
+      This is precisely where the human heart drifts. We do not typically reject God outright. We
+      reposition Him. We want Him close &mdash; helpful, accessible, affirming &mdash; but not
+      ultimate. The shift is rarely dramatic. It is gradual. It happens through small adjustments in
+      what we measure and what we celebrate. Over time, the center moves.
+    </p>
+
+    <p>
+      Paul describes this exchange with piercing clarity: <em>They exchanged the glory of the immortal
+      God&hellip;</em> (Romans 1:23). The exchange did not end in the ancient world. It continues
+      wherever God is displaced from the center.
+    </p>
+
+    <p>
+      In our day, the exchange usually takes a particular form. God is no longer the treasure; He
+      becomes the means to something else &mdash; our success, our fulfillment, our flourishing. In
+      that moment everything changes. God becomes the tool. Man becomes the end. And yet the language
+      can remain almost entirely the same. That is what makes this really hard to see at times.
+    </p>
+
+    <h2>When the Church borrows the language of the world</h2>
+
+    <p>
+      The Church is not immune. In a desire to be effective, relevant, and strategic, we adopt the
+      language and frameworks of the world around us. We speak of thriving, of engagement, of
+      outcomes, of growth. We develop metrics to track progress and systems to optimize results. None
+      of that is inherently wrong. Good stewardship of a five-hundred-member church, let alone a
+      ten-thousand-member church, requires better spreadsheets than it did a century ago.
+    </p>
+
+    <p>
+      But the tools become dangerous when they begin to define the goal. When measurable success
+      becomes the primary lens, we start valuing what is visible over what is eternal. We start
+      asking, <em>Is this working?</em> when the question Scripture puts to us is, <em>Is this
+      faithful?</em> In fact, sometimes we even begin to believe that we&rsquo;re the ones who get to
+      define what &ldquo;fruit&rdquo; looks like.
+    </p>
+
+    <div class="pullquote">
+      <p>&ldquo;The metrics of the marketplace are not the metrics of heaven.&rdquo;</p>
+    </div>
+
+    <p>
+      Even worse, when the gifts are elevated and even worshipped in place of the Giver, they begin
+      to enslave. We turn God into our butler and happiness becomes the focus of our prayer life.
+      Purpose becomes something to prove. Community becomes something to curate. Success becomes
+      something to achieve. What once appeared life-giving becomes quietly burdensome &mdash; a
+      dashboard you can never fully close.
+    </p>
+
+    <h2>The cost of getting this wrong</h2>
+
+    <p>
+      This is not a peripheral issue. If we misunderstand the goal of the Christian life, everything
+      downstream of it distorts. If <em>flourishing</em> becomes the ultimate aim, then suffering
+      becomes an obstacle to be avoided &mdash; managed, medicated, or marketed around. But Scripture
+      presents a radically different vision:
+    </p>
+
+    <blockquote class="scripture">
+      Through many tribulations we must enter the kingdom of God.
+      <cite>Acts 14:22</cite>
+    </blockquote>
+
+    <p>
+      And again: <em>this light momentary affliction is preparing for us an eternal weight of glory
+      beyond all comparison</em> (2 Corinthians 4:17). Suffering is not a detour on the way to
+      flourishing. It is, more often than we want to admit, part of the path. A man-centered vision
+      of flourishing cannot hold this. It must either minimize suffering or attempt to eliminate it.
+      In doing so, it strips suffering of its redemptive purpose and leaves the believer unprepared
+      for the realities of the Christian life. I heard a new Christian song recently with lyrics
+      that, in speaking of God, said &ldquo;He looks at me and wouldn&rsquo;t change a thing.&rdquo;
+      That is the language of secular humanism with God added on top. It is the language of our
+      modern rendition of &ldquo;flourishing,&rdquo; not of the cross. The reality is that as
+      Christians, God is going to look at us and change everything &mdash; that is the promise of our
+      sanctification. The promise of becoming like Him, not just a better version of ourselves. Why?
+      Because 1 Peter 1:16 reminds us that &ldquo;you must be holy, for I am holy&rdquo; (ESV).
+    </p>
+
+    <p>
+      The hard truth is that what you measure is what you will shape. What you shape is what you will
+      become. An entire generation formed around the avoidance of suffering &mdash; or the idea that
+      God just wants you to be happy in this life &mdash; will be unprepared for the Christian life
+      it has been promised. True flourishing comes through suffering, when we begin to look more like
+      Christ.
+    </p>
+
+    <h2>A word from one of the builders</h2>
+
+    <p>
+      I should say the uncomfortable part plainly. I am an executive and a consultant. I build
+      frameworks. I run strategy engagements. I use metrics, and I recommend them to others. The
+      discipline I practice is near kin to the very issue I am warning against.
+    </p>
+
+    <p>
+      That is exactly why I am writing this.
+    </p>
+
+    <p>
+      The work itself is not the problem. Serious organizations need serious thinking. Ministries
+      especially &mdash; because they are stewarding eternal stakes with finite resources &mdash;
+      deserve discipline of the highest order. What they do not need, what none of us need, is for
+      the discipline to quietly become the point. The KPI does not know the difference between
+      sanctification and engagement. The dashboard will not be able to tell you whether the
+      measurement is a servant of the mission or whether it is actually on pace toward slowly
+      replacing it. The job of the leader is to know the difference. The job of any consultant worth
+      hiring is to help the leader hold that line, not erase it.
+    </p>
+
+    <div class="diagnostic" aria-labelledby="diag-title">
       <span class="eyebrow">A diagnostic for leaders</span>
-      <h3 id="score-diag-title">Five questions to audit your scorecard before the next planning cycle.</h3>
+      <h3 id="diag-title">Four questions to tell whether the drift has begun in your own house.</h3>
       <ol>
         <li>
-          <strong>If your scorecard were the only thing left of your organization, what kind of
-          organization would a stranger reconstruct from it?</strong> Is that the organization you
-          set out to build?
+          <strong>Could a secular competitor read your strategic plan and find nothing theologically
+          distinctive in it?</strong> If so, you have borrowed a framework from the world without
+          sanctifying it.
         </li>
         <li>
-          <strong>Which of your current metrics, if hit perfectly, would actually move your mission
-          forward &mdash; and which would simply make the dashboard look better?</strong> Honesty
-          here is uncommon. Honesty here is everything.
+          <strong>When you review your metrics, do you feel closer to God or further from Him?</strong>
+          Dashboards are not morally neutral. A metric that consistently produces anxiety and
+          comparison is forming the soul of whoever reads it.
         </li>
         <li>
-          <strong>What is one thing your mission absolutely cannot afford to lose, and where does it
-          appear on your scorecard?</strong> If it doesn&rsquo;t appear, the scorecard is unlikely to
-          protect it.
+          <strong>Would the people Scripture calls blessed — the poor in spirit, the persecuted,
+          those who mourn — register as healthy on your flourishing index?</strong> If the answer is
+          no, your index is not measuring what Scripture is measuring.
         </li>
         <li>
-          <strong>What metric is your team quietly gaming?</strong> Every scorecard is being gamed
-          somewhere. The leader who knows where, is the leader who can fix it.
-        </li>
-        <li>
-          <strong>If you removed the three loudest numbers on your scorecard, would your team still
-          know what excellence looked like?</strong> If not, those numbers are no longer measuring
-          excellence. They are <em>defining</em> it. That is the difference between a healthy
-          scorecard and a controlling one.
+          <strong>If God removed every metric you now track — growth, engagement, wellbeing scores,
+          budget — could your organization still articulate why it exists?</strong> If not, the
+          metrics are no longer describing the mission. They are <em>being</em> the mission.
         </li>
       </ol>
     </div>
@@ -496,54 +778,55 @@
     <h2>The recovery</h2>
 
     <p>
-      The scorecard is the architecture of your second decade. Whatever you measure now, your team
-      will spend the next ten years becoming. That is not a metaphor. It is a description of how
-      organizations actually work. There is no exemption for mission. There is no exemption for
-      ministry. There is no exemption for sincerity of intent. The dashboard does not care what you
-      meant. It forms what it forms.
+      We stand, then, at a crossroads. Not merely of terminology, but of truth. Not merely of
+      strategy, but of ultimate allegiance. The recovery is not the rejection of joy but its
+      restoration. It is not the abandonment of wise measurement but the reordering of it. It is the
+      refusal to let a good word — <em>flourishing</em> — quietly become a substitute for the God it
+      was meant to describe.
+    </p>
+
+    <blockquote class="scripture">
+      Whom have I in heaven but you? And there is nothing on earth that I desire besides you.
+      <cite>Psalm 73:25</cite>
+    </blockquote>
+
+    <p>
+      <em>Nothing.</em> Not even the things we have been taught to label as flourishing.
     </p>
 
     <p>
-      The good news is that the scorecard is the most malleable instrument the leader holds. The
-      strategy is heavy. The structure is heavier. The culture is heavier still. But the scorecard
-      can be redesigned in a single planning cycle. That is the leverage. That is why this work is
-      worth doing now, before the next set of targets get set.
+      And so the question, for leader and believer alike, is finally the same one it has always been.
+      If everything else were stripped away — comfort, success, recognition, even health — would God
+      be enough? Because the only vision of flourishing that will survive the stripping is the one
+      that was never about flourishing in the first place.
     </p>
 
-    <p>
-      Choose, then, with seriousness and intentionality &mdash; not convenience or tradition. Choose with the awareness that what you count is what you
-      will, in time, become. And choose, finally, with the recognition that the scorecard is one of
-      the most theologically loaded instruments in the modern organization &mdash; and that the
-      leader who treats it as a spreadsheet exercise is, inadvertently, allowing a spreadsheet to
-      disciple their team.
-    </p>
+    <blockquote class="scripture">
+      For from him and through him and to him are all things. To him be glory forever. Amen.
+      <cite>Romans 11:36</cite>
+    </blockquote>
 
-    <p>
-      There is a better way to lead than that. There always has been.
-    </p>
-
-    <p class="signoff">&mdash; Brandon Harvath</p>
+    <p class="signoff">— Brandon Harvath</p>
 
     <div class="series">
       <h4>The Flourishing Series</h4>
       <ol>
-        <li><a href="the-flourishing-trap.html">The Flourishing Trap</a> &mdash; the diagnosis</li>
+        <li class="current">The Flourishing Trap &mdash; the diagnosis</li>
         <li><a href="the-quiet-drift.html">The Quiet Drift</a> &mdash; the anatomy</li>
-        <li class="current">The Scorecard Problem &mdash; the recovery</li>
+        <li><a href="the-scorecard-problem.html">The Scorecard Problem</a> &mdash; the recovery</li>
         <li><a href="managing-beyond-the-scorecard.html">Managing Beyond the Scorecard</a> &mdash; the posture</li>
       </ol>
     </div>
 
     <div class="endcta">
-      <h3>If you are about to set next year&rsquo;s targets&hellip;</h3>
+      <h3>If this essay named something you have already been sensing&hellip;</h3>
       <p>
-        Before the strategic planning cycle begins, the most leveraged conversation you can have is
-        about your scorecard, not your goals. I build scorecard architectures for churches,
-        ministries, nonprofits, and businesses that want what they measure to match what they actually
-        believe in. Quiet, rigorous, fast.
+        I help churches, ministries, and mission-driven organizations build strategy that stays
+        tethered to what they actually believe. If your team is reaching for frameworks right now and
+        something about them doesn&rsquo;t sit right, that is worth a conversation.
       </p>
       <a href="../index.html#contact" class="btn btn--primary">
-        Schedule an intro call <span class="arrow" aria-hidden="true">&rarr;</span>
+        Schedule an intro call <span class="arrow" aria-hidden="true">→</span>
       </a>
     </div>
 
@@ -551,30 +834,31 @@
 </article>
 </main>
 
+<!-- ============== FOOTER ============== -->
 <footer>
   <div class="wrap">
     <a href="../index.html" class="footer__brand">
       <span class="brand__mark" aria-hidden="true">
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <clipPath id="ftr-score-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
-            <radialGradient id="ftr-score-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
+            <clipPath id="ftr-essay-clip"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
+            <radialGradient id="ftr-essay-sky" cx="50%" cy="68%" r="72%" fx="50%" fy="70%">
               <stop offset="0%"  stop-color="#F4D896"/>
               <stop offset="22%" stop-color="#D4A24C" stop-opacity="0.95"/>
               <stop offset="52%" stop-color="#D4A24C" stop-opacity="0.38"/>
               <stop offset="82%" stop-color="#0B1F3A" stop-opacity="0.95"/>
               <stop offset="100%" stop-color="#07162B"/>
             </radialGradient>
-            <radialGradient id="ftr-score-sun" cx="50%" cy="100%" r="75%">
+            <radialGradient id="ftr-essay-sun" cx="50%" cy="100%" r="75%">
               <stop offset="0%"  stop-color="#FFF4C8"/>
               <stop offset="55%" stop-color="#F4D896"/>
               <stop offset="100%" stop-color="#D4A24C"/>
             </radialGradient>
           </defs>
           <rect x="2" y="2" width="60" height="60" rx="12" fill="#07162B"/>
-          <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#ftr-score-sky)"/>
-          <g clip-path="url(#ftr-score-clip)">
-            <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#ftr-score-sun)"/>
+          <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#ftr-essay-sky)"/>
+          <g clip-path="url(#ftr-essay-clip)">
+            <path d="M17 44 A15 15 0 0 1 47 44 Z" fill="url(#ftr-essay-sun)"/>
             <line x1="2" y1="44" x2="62" y2="44" stroke="#D4A24C" stroke-width="1"/>
             <rect x="2" y="44" width="60" height="20" fill="#07162B"/>
           </g>
